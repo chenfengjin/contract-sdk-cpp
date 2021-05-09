@@ -8,3 +8,7 @@ build:
 
 test:
 	xdev test	
+
+build-image:
+# TODO not latest
+	docker build -t hub.baidubce.com/xchain/emcc:latest -f scripts/emcc.Dockerfile .
