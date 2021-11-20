@@ -8,3 +8,6 @@ build:
 
 test:
 	xdev test	
+
+debug-build:
+	XDEV_ROOT=`pwd`   xdev build  -o counter.wasm   --using-precompiled-sdk=false example/counter.cc --compiler host -p

@@ -7,12 +7,13 @@
 namespace xchain {
 
 static void return_response(const Response& resp) {
-    Xchain__Contract__Sdk__SetOutputRequest req;
-    req.response xchain__contract__sdk__set_output_request__init(req);
+    // Xchain__Contract__Sdk__SetOutputRequest req;
+    // Xchain__Contract__Sdk__SetOutputResponse rep;
+    // req.response xchain__contract__sdk__set_output_request__init(req);
 
-    // pb::SetOutputRequest req;
+    pb::SetOutputRequest req;
 
-    // pb::SetOutputResponse rep;
+    pb::SetOutputResponse rep;
     pb::Response* r = req.mutable_response();
     r->set_status(resp.status);
     r->set_message(resp.message);

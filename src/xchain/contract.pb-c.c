@@ -7,1843 +7,1843 @@
 #endif
 
 #include "contract.pb-c.h"
-void   xchain__contract__sdk__ping_request__init
-                     (Xchain__Contract__Sdk__PingRequest         *message)
+void   xchain__ping_request__init
+                     (Xchain__PingRequest         *message)
 {
-  static const Xchain__Contract__Sdk__PingRequest init_value = XCHAIN__CONTRACT__SDK__PING_REQUEST__INIT;
+  static const Xchain__PingRequest init_value = XCHAIN__PING_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__ping_request__get_packed_size
-                     (const Xchain__Contract__Sdk__PingRequest *message)
+size_t xchain__ping_request__get_packed_size
+                     (const Xchain__PingRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__ping_request__descriptor);
+  assert(message->base.descriptor == &xchain__ping_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__ping_request__pack
-                     (const Xchain__Contract__Sdk__PingRequest *message,
+size_t xchain__ping_request__pack
+                     (const Xchain__PingRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__ping_request__descriptor);
+  assert(message->base.descriptor == &xchain__ping_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__ping_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__PingRequest *message,
+size_t xchain__ping_request__pack_to_buffer
+                     (const Xchain__PingRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__ping_request__descriptor);
+  assert(message->base.descriptor == &xchain__ping_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__PingRequest *
-       xchain__contract__sdk__ping_request__unpack
+Xchain__PingRequest *
+       xchain__ping_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__PingRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__ping_request__descriptor,
+  return (Xchain__PingRequest *)
+     protobuf_c_message_unpack (&xchain__ping_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__ping_request__free_unpacked
-                     (Xchain__Contract__Sdk__PingRequest *message,
+void   xchain__ping_request__free_unpacked
+                     (Xchain__PingRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__ping_request__descriptor);
+  assert(message->base.descriptor == &xchain__ping_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__ping_response__init
-                     (Xchain__Contract__Sdk__PingResponse         *message)
+void   xchain__ping_response__init
+                     (Xchain__PingResponse         *message)
 {
-  static const Xchain__Contract__Sdk__PingResponse init_value = XCHAIN__CONTRACT__SDK__PING_RESPONSE__INIT;
+  static const Xchain__PingResponse init_value = XCHAIN__PING_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__ping_response__get_packed_size
-                     (const Xchain__Contract__Sdk__PingResponse *message)
+size_t xchain__ping_response__get_packed_size
+                     (const Xchain__PingResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__ping_response__descriptor);
+  assert(message->base.descriptor == &xchain__ping_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__ping_response__pack
-                     (const Xchain__Contract__Sdk__PingResponse *message,
+size_t xchain__ping_response__pack
+                     (const Xchain__PingResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__ping_response__descriptor);
+  assert(message->base.descriptor == &xchain__ping_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__ping_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__PingResponse *message,
+size_t xchain__ping_response__pack_to_buffer
+                     (const Xchain__PingResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__ping_response__descriptor);
+  assert(message->base.descriptor == &xchain__ping_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__PingResponse *
-       xchain__contract__sdk__ping_response__unpack
+Xchain__PingResponse *
+       xchain__ping_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__PingResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__ping_response__descriptor,
+  return (Xchain__PingResponse *)
+     protobuf_c_message_unpack (&xchain__ping_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__ping_response__free_unpacked
-                     (Xchain__Contract__Sdk__PingResponse *message,
+void   xchain__ping_response__free_unpacked
+                     (Xchain__PingResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__ping_response__descriptor);
+  assert(message->base.descriptor == &xchain__ping_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__native_call_request__init
-                     (Xchain__Contract__Sdk__NativeCallRequest         *message)
+void   xchain__native_call_request__init
+                     (Xchain__NativeCallRequest         *message)
 {
-  static const Xchain__Contract__Sdk__NativeCallRequest init_value = XCHAIN__CONTRACT__SDK__NATIVE_CALL_REQUEST__INIT;
+  static const Xchain__NativeCallRequest init_value = XCHAIN__NATIVE_CALL_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__native_call_request__get_packed_size
-                     (const Xchain__Contract__Sdk__NativeCallRequest *message)
+size_t xchain__native_call_request__get_packed_size
+                     (const Xchain__NativeCallRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__native_call_request__descriptor);
+  assert(message->base.descriptor == &xchain__native_call_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__native_call_request__pack
-                     (const Xchain__Contract__Sdk__NativeCallRequest *message,
+size_t xchain__native_call_request__pack
+                     (const Xchain__NativeCallRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__native_call_request__descriptor);
+  assert(message->base.descriptor == &xchain__native_call_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__native_call_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__NativeCallRequest *message,
+size_t xchain__native_call_request__pack_to_buffer
+                     (const Xchain__NativeCallRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__native_call_request__descriptor);
+  assert(message->base.descriptor == &xchain__native_call_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__NativeCallRequest *
-       xchain__contract__sdk__native_call_request__unpack
+Xchain__NativeCallRequest *
+       xchain__native_call_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__NativeCallRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__native_call_request__descriptor,
+  return (Xchain__NativeCallRequest *)
+     protobuf_c_message_unpack (&xchain__native_call_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__native_call_request__free_unpacked
-                     (Xchain__Contract__Sdk__NativeCallRequest *message,
+void   xchain__native_call_request__free_unpacked
+                     (Xchain__NativeCallRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__native_call_request__descriptor);
+  assert(message->base.descriptor == &xchain__native_call_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__native_call_response__init
-                     (Xchain__Contract__Sdk__NativeCallResponse         *message)
+void   xchain__native_call_response__init
+                     (Xchain__NativeCallResponse         *message)
 {
-  static const Xchain__Contract__Sdk__NativeCallResponse init_value = XCHAIN__CONTRACT__SDK__NATIVE_CALL_RESPONSE__INIT;
+  static const Xchain__NativeCallResponse init_value = XCHAIN__NATIVE_CALL_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__native_call_response__get_packed_size
-                     (const Xchain__Contract__Sdk__NativeCallResponse *message)
+size_t xchain__native_call_response__get_packed_size
+                     (const Xchain__NativeCallResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__native_call_response__descriptor);
+  assert(message->base.descriptor == &xchain__native_call_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__native_call_response__pack
-                     (const Xchain__Contract__Sdk__NativeCallResponse *message,
+size_t xchain__native_call_response__pack
+                     (const Xchain__NativeCallResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__native_call_response__descriptor);
+  assert(message->base.descriptor == &xchain__native_call_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__native_call_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__NativeCallResponse *message,
+size_t xchain__native_call_response__pack_to_buffer
+                     (const Xchain__NativeCallResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__native_call_response__descriptor);
+  assert(message->base.descriptor == &xchain__native_call_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__NativeCallResponse *
-       xchain__contract__sdk__native_call_response__unpack
+Xchain__NativeCallResponse *
+       xchain__native_call_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__NativeCallResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__native_call_response__descriptor,
+  return (Xchain__NativeCallResponse *)
+     protobuf_c_message_unpack (&xchain__native_call_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__native_call_response__free_unpacked
-                     (Xchain__Contract__Sdk__NativeCallResponse *message,
+void   xchain__native_call_response__free_unpacked
+                     (Xchain__NativeCallResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__native_call_response__descriptor);
+  assert(message->base.descriptor == &xchain__native_call_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__arg_pair__init
-                     (Xchain__Contract__Sdk__ArgPair         *message)
+void   xchain__arg_pair__init
+                     (Xchain__ArgPair         *message)
 {
-  static const Xchain__Contract__Sdk__ArgPair init_value = XCHAIN__CONTRACT__SDK__ARG_PAIR__INIT;
+  static const Xchain__ArgPair init_value = XCHAIN__ARG_PAIR__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__arg_pair__get_packed_size
-                     (const Xchain__Contract__Sdk__ArgPair *message)
+size_t xchain__arg_pair__get_packed_size
+                     (const Xchain__ArgPair *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__arg_pair__descriptor);
+  assert(message->base.descriptor == &xchain__arg_pair__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__arg_pair__pack
-                     (const Xchain__Contract__Sdk__ArgPair *message,
+size_t xchain__arg_pair__pack
+                     (const Xchain__ArgPair *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__arg_pair__descriptor);
+  assert(message->base.descriptor == &xchain__arg_pair__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__arg_pair__pack_to_buffer
-                     (const Xchain__Contract__Sdk__ArgPair *message,
+size_t xchain__arg_pair__pack_to_buffer
+                     (const Xchain__ArgPair *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__arg_pair__descriptor);
+  assert(message->base.descriptor == &xchain__arg_pair__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__ArgPair *
-       xchain__contract__sdk__arg_pair__unpack
+Xchain__ArgPair *
+       xchain__arg_pair__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__ArgPair *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__arg_pair__descriptor,
+  return (Xchain__ArgPair *)
+     protobuf_c_message_unpack (&xchain__arg_pair__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__arg_pair__free_unpacked
-                     (Xchain__Contract__Sdk__ArgPair *message,
+void   xchain__arg_pair__free_unpacked
+                     (Xchain__ArgPair *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__arg_pair__descriptor);
+  assert(message->base.descriptor == &xchain__arg_pair__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__call_args__init
-                     (Xchain__Contract__Sdk__CallArgs         *message)
+void   xchain__call_args__init
+                     (Xchain__CallArgs         *message)
 {
-  static const Xchain__Contract__Sdk__CallArgs init_value = XCHAIN__CONTRACT__SDK__CALL_ARGS__INIT;
+  static const Xchain__CallArgs init_value = XCHAIN__CALL_ARGS__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__call_args__get_packed_size
-                     (const Xchain__Contract__Sdk__CallArgs *message)
+size_t xchain__call_args__get_packed_size
+                     (const Xchain__CallArgs *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__call_args__descriptor);
+  assert(message->base.descriptor == &xchain__call_args__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__call_args__pack
-                     (const Xchain__Contract__Sdk__CallArgs *message,
+size_t xchain__call_args__pack
+                     (const Xchain__CallArgs *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__call_args__descriptor);
+  assert(message->base.descriptor == &xchain__call_args__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__call_args__pack_to_buffer
-                     (const Xchain__Contract__Sdk__CallArgs *message,
+size_t xchain__call_args__pack_to_buffer
+                     (const Xchain__CallArgs *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__call_args__descriptor);
+  assert(message->base.descriptor == &xchain__call_args__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__CallArgs *
-       xchain__contract__sdk__call_args__unpack
+Xchain__CallArgs *
+       xchain__call_args__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__CallArgs *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__call_args__descriptor,
+  return (Xchain__CallArgs *)
+     protobuf_c_message_unpack (&xchain__call_args__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__call_args__free_unpacked
-                     (Xchain__Contract__Sdk__CallArgs *message,
+void   xchain__call_args__free_unpacked
+                     (Xchain__CallArgs *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__call_args__descriptor);
+  assert(message->base.descriptor == &xchain__call_args__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__syscall_header__init
-                     (Xchain__Contract__Sdk__SyscallHeader         *message)
+void   xchain__syscall_header__init
+                     (Xchain__SyscallHeader         *message)
 {
-  static const Xchain__Contract__Sdk__SyscallHeader init_value = XCHAIN__CONTRACT__SDK__SYSCALL_HEADER__INIT;
+  static const Xchain__SyscallHeader init_value = XCHAIN__SYSCALL_HEADER__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__syscall_header__get_packed_size
-                     (const Xchain__Contract__Sdk__SyscallHeader *message)
+size_t xchain__syscall_header__get_packed_size
+                     (const Xchain__SyscallHeader *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__syscall_header__descriptor);
+  assert(message->base.descriptor == &xchain__syscall_header__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__syscall_header__pack
-                     (const Xchain__Contract__Sdk__SyscallHeader *message,
+size_t xchain__syscall_header__pack
+                     (const Xchain__SyscallHeader *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__syscall_header__descriptor);
+  assert(message->base.descriptor == &xchain__syscall_header__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__syscall_header__pack_to_buffer
-                     (const Xchain__Contract__Sdk__SyscallHeader *message,
+size_t xchain__syscall_header__pack_to_buffer
+                     (const Xchain__SyscallHeader *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__syscall_header__descriptor);
+  assert(message->base.descriptor == &xchain__syscall_header__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__SyscallHeader *
-       xchain__contract__sdk__syscall_header__unpack
+Xchain__SyscallHeader *
+       xchain__syscall_header__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__SyscallHeader *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__syscall_header__descriptor,
+  return (Xchain__SyscallHeader *)
+     protobuf_c_message_unpack (&xchain__syscall_header__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__syscall_header__free_unpacked
-                     (Xchain__Contract__Sdk__SyscallHeader *message,
+void   xchain__syscall_header__free_unpacked
+                     (Xchain__SyscallHeader *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__syscall_header__descriptor);
+  assert(message->base.descriptor == &xchain__syscall_header__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__put_request__init
-                     (Xchain__Contract__Sdk__PutRequest         *message)
+void   xchain__put_request__init
+                     (Xchain__PutRequest         *message)
 {
-  static const Xchain__Contract__Sdk__PutRequest init_value = XCHAIN__CONTRACT__SDK__PUT_REQUEST__INIT;
+  static const Xchain__PutRequest init_value = XCHAIN__PUT_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__put_request__get_packed_size
-                     (const Xchain__Contract__Sdk__PutRequest *message)
+size_t xchain__put_request__get_packed_size
+                     (const Xchain__PutRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__put_request__descriptor);
+  assert(message->base.descriptor == &xchain__put_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__put_request__pack
-                     (const Xchain__Contract__Sdk__PutRequest *message,
+size_t xchain__put_request__pack
+                     (const Xchain__PutRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__put_request__descriptor);
+  assert(message->base.descriptor == &xchain__put_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__put_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__PutRequest *message,
+size_t xchain__put_request__pack_to_buffer
+                     (const Xchain__PutRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__put_request__descriptor);
+  assert(message->base.descriptor == &xchain__put_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__PutRequest *
-       xchain__contract__sdk__put_request__unpack
+Xchain__PutRequest *
+       xchain__put_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__PutRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__put_request__descriptor,
+  return (Xchain__PutRequest *)
+     protobuf_c_message_unpack (&xchain__put_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__put_request__free_unpacked
-                     (Xchain__Contract__Sdk__PutRequest *message,
+void   xchain__put_request__free_unpacked
+                     (Xchain__PutRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__put_request__descriptor);
+  assert(message->base.descriptor == &xchain__put_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__put_response__init
-                     (Xchain__Contract__Sdk__PutResponse         *message)
+void   xchain__put_response__init
+                     (Xchain__PutResponse         *message)
 {
-  static const Xchain__Contract__Sdk__PutResponse init_value = XCHAIN__CONTRACT__SDK__PUT_RESPONSE__INIT;
+  static const Xchain__PutResponse init_value = XCHAIN__PUT_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__put_response__get_packed_size
-                     (const Xchain__Contract__Sdk__PutResponse *message)
+size_t xchain__put_response__get_packed_size
+                     (const Xchain__PutResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__put_response__descriptor);
+  assert(message->base.descriptor == &xchain__put_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__put_response__pack
-                     (const Xchain__Contract__Sdk__PutResponse *message,
+size_t xchain__put_response__pack
+                     (const Xchain__PutResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__put_response__descriptor);
+  assert(message->base.descriptor == &xchain__put_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__put_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__PutResponse *message,
+size_t xchain__put_response__pack_to_buffer
+                     (const Xchain__PutResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__put_response__descriptor);
+  assert(message->base.descriptor == &xchain__put_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__PutResponse *
-       xchain__contract__sdk__put_response__unpack
+Xchain__PutResponse *
+       xchain__put_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__PutResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__put_response__descriptor,
+  return (Xchain__PutResponse *)
+     protobuf_c_message_unpack (&xchain__put_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__put_response__free_unpacked
-                     (Xchain__Contract__Sdk__PutResponse *message,
+void   xchain__put_response__free_unpacked
+                     (Xchain__PutResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__put_response__descriptor);
+  assert(message->base.descriptor == &xchain__put_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__get_request__init
-                     (Xchain__Contract__Sdk__GetRequest         *message)
+void   xchain__get_request__init
+                     (Xchain__GetRequest         *message)
 {
-  static const Xchain__Contract__Sdk__GetRequest init_value = XCHAIN__CONTRACT__SDK__GET_REQUEST__INIT;
+  static const Xchain__GetRequest init_value = XCHAIN__GET_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__get_request__get_packed_size
-                     (const Xchain__Contract__Sdk__GetRequest *message)
+size_t xchain__get_request__get_packed_size
+                     (const Xchain__GetRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__get_request__pack
-                     (const Xchain__Contract__Sdk__GetRequest *message,
+size_t xchain__get_request__pack
+                     (const Xchain__GetRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__get_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__GetRequest *message,
+size_t xchain__get_request__pack_to_buffer
+                     (const Xchain__GetRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__GetRequest *
-       xchain__contract__sdk__get_request__unpack
+Xchain__GetRequest *
+       xchain__get_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__GetRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__get_request__descriptor,
+  return (Xchain__GetRequest *)
+     protobuf_c_message_unpack (&xchain__get_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__get_request__free_unpacked
-                     (Xchain__Contract__Sdk__GetRequest *message,
+void   xchain__get_request__free_unpacked
+                     (Xchain__GetRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__get_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__get_response__init
-                     (Xchain__Contract__Sdk__GetResponse         *message)
+void   xchain__get_response__init
+                     (Xchain__GetResponse         *message)
 {
-  static const Xchain__Contract__Sdk__GetResponse init_value = XCHAIN__CONTRACT__SDK__GET_RESPONSE__INIT;
+  static const Xchain__GetResponse init_value = XCHAIN__GET_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__get_response__get_packed_size
-                     (const Xchain__Contract__Sdk__GetResponse *message)
+size_t xchain__get_response__get_packed_size
+                     (const Xchain__GetResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_response__descriptor);
+  assert(message->base.descriptor == &xchain__get_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__get_response__pack
-                     (const Xchain__Contract__Sdk__GetResponse *message,
+size_t xchain__get_response__pack
+                     (const Xchain__GetResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_response__descriptor);
+  assert(message->base.descriptor == &xchain__get_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__get_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__GetResponse *message,
+size_t xchain__get_response__pack_to_buffer
+                     (const Xchain__GetResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_response__descriptor);
+  assert(message->base.descriptor == &xchain__get_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__GetResponse *
-       xchain__contract__sdk__get_response__unpack
+Xchain__GetResponse *
+       xchain__get_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__GetResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__get_response__descriptor,
+  return (Xchain__GetResponse *)
+     protobuf_c_message_unpack (&xchain__get_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__get_response__free_unpacked
-                     (Xchain__Contract__Sdk__GetResponse *message,
+void   xchain__get_response__free_unpacked
+                     (Xchain__GetResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__get_response__descriptor);
+  assert(message->base.descriptor == &xchain__get_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__delete_request__init
-                     (Xchain__Contract__Sdk__DeleteRequest         *message)
+void   xchain__delete_request__init
+                     (Xchain__DeleteRequest         *message)
 {
-  static const Xchain__Contract__Sdk__DeleteRequest init_value = XCHAIN__CONTRACT__SDK__DELETE_REQUEST__INIT;
+  static const Xchain__DeleteRequest init_value = XCHAIN__DELETE_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__delete_request__get_packed_size
-                     (const Xchain__Contract__Sdk__DeleteRequest *message)
+size_t xchain__delete_request__get_packed_size
+                     (const Xchain__DeleteRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__delete_request__descriptor);
+  assert(message->base.descriptor == &xchain__delete_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__delete_request__pack
-                     (const Xchain__Contract__Sdk__DeleteRequest *message,
+size_t xchain__delete_request__pack
+                     (const Xchain__DeleteRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__delete_request__descriptor);
+  assert(message->base.descriptor == &xchain__delete_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__delete_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__DeleteRequest *message,
+size_t xchain__delete_request__pack_to_buffer
+                     (const Xchain__DeleteRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__delete_request__descriptor);
+  assert(message->base.descriptor == &xchain__delete_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__DeleteRequest *
-       xchain__contract__sdk__delete_request__unpack
+Xchain__DeleteRequest *
+       xchain__delete_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__DeleteRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__delete_request__descriptor,
+  return (Xchain__DeleteRequest *)
+     protobuf_c_message_unpack (&xchain__delete_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__delete_request__free_unpacked
-                     (Xchain__Contract__Sdk__DeleteRequest *message,
+void   xchain__delete_request__free_unpacked
+                     (Xchain__DeleteRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__delete_request__descriptor);
+  assert(message->base.descriptor == &xchain__delete_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__delete_response__init
-                     (Xchain__Contract__Sdk__DeleteResponse         *message)
+void   xchain__delete_response__init
+                     (Xchain__DeleteResponse         *message)
 {
-  static const Xchain__Contract__Sdk__DeleteResponse init_value = XCHAIN__CONTRACT__SDK__DELETE_RESPONSE__INIT;
+  static const Xchain__DeleteResponse init_value = XCHAIN__DELETE_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__delete_response__get_packed_size
-                     (const Xchain__Contract__Sdk__DeleteResponse *message)
+size_t xchain__delete_response__get_packed_size
+                     (const Xchain__DeleteResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__delete_response__descriptor);
+  assert(message->base.descriptor == &xchain__delete_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__delete_response__pack
-                     (const Xchain__Contract__Sdk__DeleteResponse *message,
+size_t xchain__delete_response__pack
+                     (const Xchain__DeleteResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__delete_response__descriptor);
+  assert(message->base.descriptor == &xchain__delete_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__delete_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__DeleteResponse *message,
+size_t xchain__delete_response__pack_to_buffer
+                     (const Xchain__DeleteResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__delete_response__descriptor);
+  assert(message->base.descriptor == &xchain__delete_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__DeleteResponse *
-       xchain__contract__sdk__delete_response__unpack
+Xchain__DeleteResponse *
+       xchain__delete_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__DeleteResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__delete_response__descriptor,
+  return (Xchain__DeleteResponse *)
+     protobuf_c_message_unpack (&xchain__delete_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__delete_response__free_unpacked
-                     (Xchain__Contract__Sdk__DeleteResponse *message,
+void   xchain__delete_response__free_unpacked
+                     (Xchain__DeleteResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__delete_response__descriptor);
+  assert(message->base.descriptor == &xchain__delete_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__iterator_request__init
-                     (Xchain__Contract__Sdk__IteratorRequest         *message)
+void   xchain__iterator_request__init
+                     (Xchain__IteratorRequest         *message)
 {
-  static const Xchain__Contract__Sdk__IteratorRequest init_value = XCHAIN__CONTRACT__SDK__ITERATOR_REQUEST__INIT;
+  static const Xchain__IteratorRequest init_value = XCHAIN__ITERATOR_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__iterator_request__get_packed_size
-                     (const Xchain__Contract__Sdk__IteratorRequest *message)
+size_t xchain__iterator_request__get_packed_size
+                     (const Xchain__IteratorRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_request__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__iterator_request__pack
-                     (const Xchain__Contract__Sdk__IteratorRequest *message,
+size_t xchain__iterator_request__pack
+                     (const Xchain__IteratorRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_request__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__iterator_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__IteratorRequest *message,
+size_t xchain__iterator_request__pack_to_buffer
+                     (const Xchain__IteratorRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_request__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__IteratorRequest *
-       xchain__contract__sdk__iterator_request__unpack
+Xchain__IteratorRequest *
+       xchain__iterator_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__IteratorRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__iterator_request__descriptor,
+  return (Xchain__IteratorRequest *)
+     protobuf_c_message_unpack (&xchain__iterator_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__iterator_request__free_unpacked
-                     (Xchain__Contract__Sdk__IteratorRequest *message,
+void   xchain__iterator_request__free_unpacked
+                     (Xchain__IteratorRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_request__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__iterator_item__init
-                     (Xchain__Contract__Sdk__IteratorItem         *message)
+void   xchain__iterator_item__init
+                     (Xchain__IteratorItem         *message)
 {
-  static const Xchain__Contract__Sdk__IteratorItem init_value = XCHAIN__CONTRACT__SDK__ITERATOR_ITEM__INIT;
+  static const Xchain__IteratorItem init_value = XCHAIN__ITERATOR_ITEM__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__iterator_item__get_packed_size
-                     (const Xchain__Contract__Sdk__IteratorItem *message)
+size_t xchain__iterator_item__get_packed_size
+                     (const Xchain__IteratorItem *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_item__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_item__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__iterator_item__pack
-                     (const Xchain__Contract__Sdk__IteratorItem *message,
+size_t xchain__iterator_item__pack
+                     (const Xchain__IteratorItem *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_item__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_item__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__iterator_item__pack_to_buffer
-                     (const Xchain__Contract__Sdk__IteratorItem *message,
+size_t xchain__iterator_item__pack_to_buffer
+                     (const Xchain__IteratorItem *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_item__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_item__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__IteratorItem *
-       xchain__contract__sdk__iterator_item__unpack
+Xchain__IteratorItem *
+       xchain__iterator_item__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__IteratorItem *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__iterator_item__descriptor,
+  return (Xchain__IteratorItem *)
+     protobuf_c_message_unpack (&xchain__iterator_item__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__iterator_item__free_unpacked
-                     (Xchain__Contract__Sdk__IteratorItem *message,
+void   xchain__iterator_item__free_unpacked
+                     (Xchain__IteratorItem *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_item__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_item__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__iterator_response__init
-                     (Xchain__Contract__Sdk__IteratorResponse         *message)
+void   xchain__iterator_response__init
+                     (Xchain__IteratorResponse         *message)
 {
-  static const Xchain__Contract__Sdk__IteratorResponse init_value = XCHAIN__CONTRACT__SDK__ITERATOR_RESPONSE__INIT;
+  static const Xchain__IteratorResponse init_value = XCHAIN__ITERATOR_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__iterator_response__get_packed_size
-                     (const Xchain__Contract__Sdk__IteratorResponse *message)
+size_t xchain__iterator_response__get_packed_size
+                     (const Xchain__IteratorResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_response__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__iterator_response__pack
-                     (const Xchain__Contract__Sdk__IteratorResponse *message,
+size_t xchain__iterator_response__pack
+                     (const Xchain__IteratorResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_response__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__iterator_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__IteratorResponse *message,
+size_t xchain__iterator_response__pack_to_buffer
+                     (const Xchain__IteratorResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_response__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__IteratorResponse *
-       xchain__contract__sdk__iterator_response__unpack
+Xchain__IteratorResponse *
+       xchain__iterator_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__IteratorResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__iterator_response__descriptor,
+  return (Xchain__IteratorResponse *)
+     protobuf_c_message_unpack (&xchain__iterator_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__iterator_response__free_unpacked
-                     (Xchain__Contract__Sdk__IteratorResponse *message,
+void   xchain__iterator_response__free_unpacked
+                     (Xchain__IteratorResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__iterator_response__descriptor);
+  assert(message->base.descriptor == &xchain__iterator_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__query_tx_request__init
-                     (Xchain__Contract__Sdk__QueryTxRequest         *message)
+void   xchain__query_tx_request__init
+                     (Xchain__QueryTxRequest         *message)
 {
-  static const Xchain__Contract__Sdk__QueryTxRequest init_value = XCHAIN__CONTRACT__SDK__QUERY_TX_REQUEST__INIT;
+  static const Xchain__QueryTxRequest init_value = XCHAIN__QUERY_TX_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__query_tx_request__get_packed_size
-                     (const Xchain__Contract__Sdk__QueryTxRequest *message)
+size_t xchain__query_tx_request__get_packed_size
+                     (const Xchain__QueryTxRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_tx_request__descriptor);
+  assert(message->base.descriptor == &xchain__query_tx_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__query_tx_request__pack
-                     (const Xchain__Contract__Sdk__QueryTxRequest *message,
+size_t xchain__query_tx_request__pack
+                     (const Xchain__QueryTxRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_tx_request__descriptor);
+  assert(message->base.descriptor == &xchain__query_tx_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__query_tx_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__QueryTxRequest *message,
+size_t xchain__query_tx_request__pack_to_buffer
+                     (const Xchain__QueryTxRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_tx_request__descriptor);
+  assert(message->base.descriptor == &xchain__query_tx_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__QueryTxRequest *
-       xchain__contract__sdk__query_tx_request__unpack
+Xchain__QueryTxRequest *
+       xchain__query_tx_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__QueryTxRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__query_tx_request__descriptor,
+  return (Xchain__QueryTxRequest *)
+     protobuf_c_message_unpack (&xchain__query_tx_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__query_tx_request__free_unpacked
-                     (Xchain__Contract__Sdk__QueryTxRequest *message,
+void   xchain__query_tx_request__free_unpacked
+                     (Xchain__QueryTxRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__query_tx_request__descriptor);
+  assert(message->base.descriptor == &xchain__query_tx_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__query_tx_response__init
-                     (Xchain__Contract__Sdk__QueryTxResponse         *message)
+void   xchain__query_tx_response__init
+                     (Xchain__QueryTxResponse         *message)
 {
-  static const Xchain__Contract__Sdk__QueryTxResponse init_value = XCHAIN__CONTRACT__SDK__QUERY_TX_RESPONSE__INIT;
+  static const Xchain__QueryTxResponse init_value = XCHAIN__QUERY_TX_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__query_tx_response__get_packed_size
-                     (const Xchain__Contract__Sdk__QueryTxResponse *message)
+size_t xchain__query_tx_response__get_packed_size
+                     (const Xchain__QueryTxResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_tx_response__descriptor);
+  assert(message->base.descriptor == &xchain__query_tx_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__query_tx_response__pack
-                     (const Xchain__Contract__Sdk__QueryTxResponse *message,
+size_t xchain__query_tx_response__pack
+                     (const Xchain__QueryTxResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_tx_response__descriptor);
+  assert(message->base.descriptor == &xchain__query_tx_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__query_tx_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__QueryTxResponse *message,
+size_t xchain__query_tx_response__pack_to_buffer
+                     (const Xchain__QueryTxResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_tx_response__descriptor);
+  assert(message->base.descriptor == &xchain__query_tx_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__QueryTxResponse *
-       xchain__contract__sdk__query_tx_response__unpack
+Xchain__QueryTxResponse *
+       xchain__query_tx_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__QueryTxResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__query_tx_response__descriptor,
+  return (Xchain__QueryTxResponse *)
+     protobuf_c_message_unpack (&xchain__query_tx_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__query_tx_response__free_unpacked
-                     (Xchain__Contract__Sdk__QueryTxResponse *message,
+void   xchain__query_tx_response__free_unpacked
+                     (Xchain__QueryTxResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__query_tx_response__descriptor);
+  assert(message->base.descriptor == &xchain__query_tx_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__query_block_request__init
-                     (Xchain__Contract__Sdk__QueryBlockRequest         *message)
+void   xchain__query_block_request__init
+                     (Xchain__QueryBlockRequest         *message)
 {
-  static const Xchain__Contract__Sdk__QueryBlockRequest init_value = XCHAIN__CONTRACT__SDK__QUERY_BLOCK_REQUEST__INIT;
+  static const Xchain__QueryBlockRequest init_value = XCHAIN__QUERY_BLOCK_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__query_block_request__get_packed_size
-                     (const Xchain__Contract__Sdk__QueryBlockRequest *message)
+size_t xchain__query_block_request__get_packed_size
+                     (const Xchain__QueryBlockRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_block_request__descriptor);
+  assert(message->base.descriptor == &xchain__query_block_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__query_block_request__pack
-                     (const Xchain__Contract__Sdk__QueryBlockRequest *message,
+size_t xchain__query_block_request__pack
+                     (const Xchain__QueryBlockRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_block_request__descriptor);
+  assert(message->base.descriptor == &xchain__query_block_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__query_block_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__QueryBlockRequest *message,
+size_t xchain__query_block_request__pack_to_buffer
+                     (const Xchain__QueryBlockRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_block_request__descriptor);
+  assert(message->base.descriptor == &xchain__query_block_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__QueryBlockRequest *
-       xchain__contract__sdk__query_block_request__unpack
+Xchain__QueryBlockRequest *
+       xchain__query_block_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__QueryBlockRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__query_block_request__descriptor,
+  return (Xchain__QueryBlockRequest *)
+     protobuf_c_message_unpack (&xchain__query_block_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__query_block_request__free_unpacked
-                     (Xchain__Contract__Sdk__QueryBlockRequest *message,
+void   xchain__query_block_request__free_unpacked
+                     (Xchain__QueryBlockRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__query_block_request__descriptor);
+  assert(message->base.descriptor == &xchain__query_block_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__query_block_response__init
-                     (Xchain__Contract__Sdk__QueryBlockResponse         *message)
+void   xchain__query_block_response__init
+                     (Xchain__QueryBlockResponse         *message)
 {
-  static const Xchain__Contract__Sdk__QueryBlockResponse init_value = XCHAIN__CONTRACT__SDK__QUERY_BLOCK_RESPONSE__INIT;
+  static const Xchain__QueryBlockResponse init_value = XCHAIN__QUERY_BLOCK_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__query_block_response__get_packed_size
-                     (const Xchain__Contract__Sdk__QueryBlockResponse *message)
+size_t xchain__query_block_response__get_packed_size
+                     (const Xchain__QueryBlockResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_block_response__descriptor);
+  assert(message->base.descriptor == &xchain__query_block_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__query_block_response__pack
-                     (const Xchain__Contract__Sdk__QueryBlockResponse *message,
+size_t xchain__query_block_response__pack
+                     (const Xchain__QueryBlockResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_block_response__descriptor);
+  assert(message->base.descriptor == &xchain__query_block_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__query_block_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__QueryBlockResponse *message,
+size_t xchain__query_block_response__pack_to_buffer
+                     (const Xchain__QueryBlockResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__query_block_response__descriptor);
+  assert(message->base.descriptor == &xchain__query_block_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__QueryBlockResponse *
-       xchain__contract__sdk__query_block_response__unpack
+Xchain__QueryBlockResponse *
+       xchain__query_block_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__QueryBlockResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__query_block_response__descriptor,
+  return (Xchain__QueryBlockResponse *)
+     protobuf_c_message_unpack (&xchain__query_block_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__query_block_response__free_unpacked
-                     (Xchain__Contract__Sdk__QueryBlockResponse *message,
+void   xchain__query_block_response__free_unpacked
+                     (Xchain__QueryBlockResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__query_block_response__descriptor);
+  assert(message->base.descriptor == &xchain__query_block_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__transfer_request__init
-                     (Xchain__Contract__Sdk__TransferRequest         *message)
+void   xchain__transfer_request__init
+                     (Xchain__TransferRequest         *message)
 {
-  static const Xchain__Contract__Sdk__TransferRequest init_value = XCHAIN__CONTRACT__SDK__TRANSFER_REQUEST__INIT;
+  static const Xchain__TransferRequest init_value = XCHAIN__TRANSFER_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__transfer_request__get_packed_size
-                     (const Xchain__Contract__Sdk__TransferRequest *message)
+size_t xchain__transfer_request__get_packed_size
+                     (const Xchain__TransferRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__transfer_request__descriptor);
+  assert(message->base.descriptor == &xchain__transfer_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__transfer_request__pack
-                     (const Xchain__Contract__Sdk__TransferRequest *message,
+size_t xchain__transfer_request__pack
+                     (const Xchain__TransferRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__transfer_request__descriptor);
+  assert(message->base.descriptor == &xchain__transfer_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__transfer_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__TransferRequest *message,
+size_t xchain__transfer_request__pack_to_buffer
+                     (const Xchain__TransferRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__transfer_request__descriptor);
+  assert(message->base.descriptor == &xchain__transfer_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__TransferRequest *
-       xchain__contract__sdk__transfer_request__unpack
+Xchain__TransferRequest *
+       xchain__transfer_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__TransferRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__transfer_request__descriptor,
+  return (Xchain__TransferRequest *)
+     protobuf_c_message_unpack (&xchain__transfer_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__transfer_request__free_unpacked
-                     (Xchain__Contract__Sdk__TransferRequest *message,
+void   xchain__transfer_request__free_unpacked
+                     (Xchain__TransferRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__transfer_request__descriptor);
+  assert(message->base.descriptor == &xchain__transfer_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__transfer_response__init
-                     (Xchain__Contract__Sdk__TransferResponse         *message)
+void   xchain__transfer_response__init
+                     (Xchain__TransferResponse         *message)
 {
-  static const Xchain__Contract__Sdk__TransferResponse init_value = XCHAIN__CONTRACT__SDK__TRANSFER_RESPONSE__INIT;
+  static const Xchain__TransferResponse init_value = XCHAIN__TRANSFER_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__transfer_response__get_packed_size
-                     (const Xchain__Contract__Sdk__TransferResponse *message)
+size_t xchain__transfer_response__get_packed_size
+                     (const Xchain__TransferResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__transfer_response__descriptor);
+  assert(message->base.descriptor == &xchain__transfer_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__transfer_response__pack
-                     (const Xchain__Contract__Sdk__TransferResponse *message,
+size_t xchain__transfer_response__pack
+                     (const Xchain__TransferResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__transfer_response__descriptor);
+  assert(message->base.descriptor == &xchain__transfer_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__transfer_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__TransferResponse *message,
+size_t xchain__transfer_response__pack_to_buffer
+                     (const Xchain__TransferResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__transfer_response__descriptor);
+  assert(message->base.descriptor == &xchain__transfer_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__TransferResponse *
-       xchain__contract__sdk__transfer_response__unpack
+Xchain__TransferResponse *
+       xchain__transfer_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__TransferResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__transfer_response__descriptor,
+  return (Xchain__TransferResponse *)
+     protobuf_c_message_unpack (&xchain__transfer_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__transfer_response__free_unpacked
-                     (Xchain__Contract__Sdk__TransferResponse *message,
+void   xchain__transfer_response__free_unpacked
+                     (Xchain__TransferResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__transfer_response__descriptor);
+  assert(message->base.descriptor == &xchain__transfer_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__contract_call_request__init
-                     (Xchain__Contract__Sdk__ContractCallRequest         *message)
+void   xchain__contract_call_request__init
+                     (Xchain__ContractCallRequest         *message)
 {
-  static const Xchain__Contract__Sdk__ContractCallRequest init_value = XCHAIN__CONTRACT__SDK__CONTRACT_CALL_REQUEST__INIT;
+  static const Xchain__ContractCallRequest init_value = XCHAIN__CONTRACT_CALL_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__contract_call_request__get_packed_size
-                     (const Xchain__Contract__Sdk__ContractCallRequest *message)
+size_t xchain__contract_call_request__get_packed_size
+                     (const Xchain__ContractCallRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__contract_call_request__descriptor);
+  assert(message->base.descriptor == &xchain__contract_call_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__contract_call_request__pack
-                     (const Xchain__Contract__Sdk__ContractCallRequest *message,
+size_t xchain__contract_call_request__pack
+                     (const Xchain__ContractCallRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__contract_call_request__descriptor);
+  assert(message->base.descriptor == &xchain__contract_call_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__contract_call_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__ContractCallRequest *message,
+size_t xchain__contract_call_request__pack_to_buffer
+                     (const Xchain__ContractCallRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__contract_call_request__descriptor);
+  assert(message->base.descriptor == &xchain__contract_call_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__ContractCallRequest *
-       xchain__contract__sdk__contract_call_request__unpack
+Xchain__ContractCallRequest *
+       xchain__contract_call_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__ContractCallRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__contract_call_request__descriptor,
+  return (Xchain__ContractCallRequest *)
+     protobuf_c_message_unpack (&xchain__contract_call_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__contract_call_request__free_unpacked
-                     (Xchain__Contract__Sdk__ContractCallRequest *message,
+void   xchain__contract_call_request__free_unpacked
+                     (Xchain__ContractCallRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__contract_call_request__descriptor);
+  assert(message->base.descriptor == &xchain__contract_call_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__contract_call_response__init
-                     (Xchain__Contract__Sdk__ContractCallResponse         *message)
+void   xchain__contract_call_response__init
+                     (Xchain__ContractCallResponse         *message)
 {
-  static const Xchain__Contract__Sdk__ContractCallResponse init_value = XCHAIN__CONTRACT__SDK__CONTRACT_CALL_RESPONSE__INIT;
+  static const Xchain__ContractCallResponse init_value = XCHAIN__CONTRACT_CALL_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__contract_call_response__get_packed_size
-                     (const Xchain__Contract__Sdk__ContractCallResponse *message)
+size_t xchain__contract_call_response__get_packed_size
+                     (const Xchain__ContractCallResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__contract_call_response__descriptor);
+  assert(message->base.descriptor == &xchain__contract_call_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__contract_call_response__pack
-                     (const Xchain__Contract__Sdk__ContractCallResponse *message,
+size_t xchain__contract_call_response__pack
+                     (const Xchain__ContractCallResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__contract_call_response__descriptor);
+  assert(message->base.descriptor == &xchain__contract_call_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__contract_call_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__ContractCallResponse *message,
+size_t xchain__contract_call_response__pack_to_buffer
+                     (const Xchain__ContractCallResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__contract_call_response__descriptor);
+  assert(message->base.descriptor == &xchain__contract_call_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__ContractCallResponse *
-       xchain__contract__sdk__contract_call_response__unpack
+Xchain__ContractCallResponse *
+       xchain__contract_call_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__ContractCallResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__contract_call_response__descriptor,
+  return (Xchain__ContractCallResponse *)
+     protobuf_c_message_unpack (&xchain__contract_call_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__contract_call_response__free_unpacked
-                     (Xchain__Contract__Sdk__ContractCallResponse *message,
+void   xchain__contract_call_response__free_unpacked
+                     (Xchain__ContractCallResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__contract_call_response__descriptor);
+  assert(message->base.descriptor == &xchain__contract_call_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__cross_contract_query_request__init
-                     (Xchain__Contract__Sdk__CrossContractQueryRequest         *message)
+void   xchain__cross_contract_query_request__init
+                     (Xchain__CrossContractQueryRequest         *message)
 {
-  static const Xchain__Contract__Sdk__CrossContractQueryRequest init_value = XCHAIN__CONTRACT__SDK__CROSS_CONTRACT_QUERY_REQUEST__INIT;
+  static const Xchain__CrossContractQueryRequest init_value = XCHAIN__CROSS_CONTRACT_QUERY_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__cross_contract_query_request__get_packed_size
-                     (const Xchain__Contract__Sdk__CrossContractQueryRequest *message)
+size_t xchain__cross_contract_query_request__get_packed_size
+                     (const Xchain__CrossContractQueryRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__cross_contract_query_request__descriptor);
+  assert(message->base.descriptor == &xchain__cross_contract_query_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__cross_contract_query_request__pack
-                     (const Xchain__Contract__Sdk__CrossContractQueryRequest *message,
+size_t xchain__cross_contract_query_request__pack
+                     (const Xchain__CrossContractQueryRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__cross_contract_query_request__descriptor);
+  assert(message->base.descriptor == &xchain__cross_contract_query_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__cross_contract_query_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__CrossContractQueryRequest *message,
+size_t xchain__cross_contract_query_request__pack_to_buffer
+                     (const Xchain__CrossContractQueryRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__cross_contract_query_request__descriptor);
+  assert(message->base.descriptor == &xchain__cross_contract_query_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__CrossContractQueryRequest *
-       xchain__contract__sdk__cross_contract_query_request__unpack
+Xchain__CrossContractQueryRequest *
+       xchain__cross_contract_query_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__CrossContractQueryRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__cross_contract_query_request__descriptor,
+  return (Xchain__CrossContractQueryRequest *)
+     protobuf_c_message_unpack (&xchain__cross_contract_query_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__cross_contract_query_request__free_unpacked
-                     (Xchain__Contract__Sdk__CrossContractQueryRequest *message,
+void   xchain__cross_contract_query_request__free_unpacked
+                     (Xchain__CrossContractQueryRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__cross_contract_query_request__descriptor);
+  assert(message->base.descriptor == &xchain__cross_contract_query_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__cross_contract_query_response__init
-                     (Xchain__Contract__Sdk__CrossContractQueryResponse         *message)
+void   xchain__cross_contract_query_response__init
+                     (Xchain__CrossContractQueryResponse         *message)
 {
-  static const Xchain__Contract__Sdk__CrossContractQueryResponse init_value = XCHAIN__CONTRACT__SDK__CROSS_CONTRACT_QUERY_RESPONSE__INIT;
+  static const Xchain__CrossContractQueryResponse init_value = XCHAIN__CROSS_CONTRACT_QUERY_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__cross_contract_query_response__get_packed_size
-                     (const Xchain__Contract__Sdk__CrossContractQueryResponse *message)
+size_t xchain__cross_contract_query_response__get_packed_size
+                     (const Xchain__CrossContractQueryResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__cross_contract_query_response__descriptor);
+  assert(message->base.descriptor == &xchain__cross_contract_query_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__cross_contract_query_response__pack
-                     (const Xchain__Contract__Sdk__CrossContractQueryResponse *message,
+size_t xchain__cross_contract_query_response__pack
+                     (const Xchain__CrossContractQueryResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__cross_contract_query_response__descriptor);
+  assert(message->base.descriptor == &xchain__cross_contract_query_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__cross_contract_query_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__CrossContractQueryResponse *message,
+size_t xchain__cross_contract_query_response__pack_to_buffer
+                     (const Xchain__CrossContractQueryResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__cross_contract_query_response__descriptor);
+  assert(message->base.descriptor == &xchain__cross_contract_query_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__CrossContractQueryResponse *
-       xchain__contract__sdk__cross_contract_query_response__unpack
+Xchain__CrossContractQueryResponse *
+       xchain__cross_contract_query_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__CrossContractQueryResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__cross_contract_query_response__descriptor,
+  return (Xchain__CrossContractQueryResponse *)
+     protobuf_c_message_unpack (&xchain__cross_contract_query_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__cross_contract_query_response__free_unpacked
-                     (Xchain__Contract__Sdk__CrossContractQueryResponse *message,
+void   xchain__cross_contract_query_response__free_unpacked
+                     (Xchain__CrossContractQueryResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__cross_contract_query_response__descriptor);
+  assert(message->base.descriptor == &xchain__cross_contract_query_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__response__init
-                     (Xchain__Contract__Sdk__Response         *message)
+void   xchain__response__init
+                     (Xchain__Response         *message)
 {
-  static const Xchain__Contract__Sdk__Response init_value = XCHAIN__CONTRACT__SDK__RESPONSE__INIT;
+  static const Xchain__Response init_value = XCHAIN__RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__response__get_packed_size
-                     (const Xchain__Contract__Sdk__Response *message)
+size_t xchain__response__get_packed_size
+                     (const Xchain__Response *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__response__descriptor);
+  assert(message->base.descriptor == &xchain__response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__response__pack
-                     (const Xchain__Contract__Sdk__Response *message,
+size_t xchain__response__pack
+                     (const Xchain__Response *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__response__descriptor);
+  assert(message->base.descriptor == &xchain__response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__Response *message,
+size_t xchain__response__pack_to_buffer
+                     (const Xchain__Response *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__response__descriptor);
+  assert(message->base.descriptor == &xchain__response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__Response *
-       xchain__contract__sdk__response__unpack
+Xchain__Response *
+       xchain__response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__Response *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__response__descriptor,
+  return (Xchain__Response *)
+     protobuf_c_message_unpack (&xchain__response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__response__free_unpacked
-                     (Xchain__Contract__Sdk__Response *message,
+void   xchain__response__free_unpacked
+                     (Xchain__Response *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__response__descriptor);
+  assert(message->base.descriptor == &xchain__response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__set_output_request__init
-                     (Xchain__Contract__Sdk__SetOutputRequest         *message)
+void   xchain__set_output_request__init
+                     (Xchain__SetOutputRequest         *message)
 {
-  static const Xchain__Contract__Sdk__SetOutputRequest init_value = XCHAIN__CONTRACT__SDK__SET_OUTPUT_REQUEST__INIT;
+  static const Xchain__SetOutputRequest init_value = XCHAIN__SET_OUTPUT_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__set_output_request__get_packed_size
-                     (const Xchain__Contract__Sdk__SetOutputRequest *message)
+size_t xchain__set_output_request__get_packed_size
+                     (const Xchain__SetOutputRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__set_output_request__descriptor);
+  assert(message->base.descriptor == &xchain__set_output_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__set_output_request__pack
-                     (const Xchain__Contract__Sdk__SetOutputRequest *message,
+size_t xchain__set_output_request__pack
+                     (const Xchain__SetOutputRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__set_output_request__descriptor);
+  assert(message->base.descriptor == &xchain__set_output_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__set_output_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__SetOutputRequest *message,
+size_t xchain__set_output_request__pack_to_buffer
+                     (const Xchain__SetOutputRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__set_output_request__descriptor);
+  assert(message->base.descriptor == &xchain__set_output_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__SetOutputRequest *
-       xchain__contract__sdk__set_output_request__unpack
+Xchain__SetOutputRequest *
+       xchain__set_output_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__SetOutputRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__set_output_request__descriptor,
+  return (Xchain__SetOutputRequest *)
+     protobuf_c_message_unpack (&xchain__set_output_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__set_output_request__free_unpacked
-                     (Xchain__Contract__Sdk__SetOutputRequest *message,
+void   xchain__set_output_request__free_unpacked
+                     (Xchain__SetOutputRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__set_output_request__descriptor);
+  assert(message->base.descriptor == &xchain__set_output_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__set_output_response__init
-                     (Xchain__Contract__Sdk__SetOutputResponse         *message)
+void   xchain__set_output_response__init
+                     (Xchain__SetOutputResponse         *message)
 {
-  static const Xchain__Contract__Sdk__SetOutputResponse init_value = XCHAIN__CONTRACT__SDK__SET_OUTPUT_RESPONSE__INIT;
+  static const Xchain__SetOutputResponse init_value = XCHAIN__SET_OUTPUT_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__set_output_response__get_packed_size
-                     (const Xchain__Contract__Sdk__SetOutputResponse *message)
+size_t xchain__set_output_response__get_packed_size
+                     (const Xchain__SetOutputResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__set_output_response__descriptor);
+  assert(message->base.descriptor == &xchain__set_output_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__set_output_response__pack
-                     (const Xchain__Contract__Sdk__SetOutputResponse *message,
+size_t xchain__set_output_response__pack
+                     (const Xchain__SetOutputResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__set_output_response__descriptor);
+  assert(message->base.descriptor == &xchain__set_output_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__set_output_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__SetOutputResponse *message,
+size_t xchain__set_output_response__pack_to_buffer
+                     (const Xchain__SetOutputResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__set_output_response__descriptor);
+  assert(message->base.descriptor == &xchain__set_output_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__SetOutputResponse *
-       xchain__contract__sdk__set_output_response__unpack
+Xchain__SetOutputResponse *
+       xchain__set_output_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__SetOutputResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__set_output_response__descriptor,
+  return (Xchain__SetOutputResponse *)
+     protobuf_c_message_unpack (&xchain__set_output_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__set_output_response__free_unpacked
-                     (Xchain__Contract__Sdk__SetOutputResponse *message,
+void   xchain__set_output_response__free_unpacked
+                     (Xchain__SetOutputResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__set_output_response__descriptor);
+  assert(message->base.descriptor == &xchain__set_output_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__get_call_args_request__init
-                     (Xchain__Contract__Sdk__GetCallArgsRequest         *message)
+void   xchain__get_call_args_request__init
+                     (Xchain__GetCallArgsRequest         *message)
 {
-  static const Xchain__Contract__Sdk__GetCallArgsRequest init_value = XCHAIN__CONTRACT__SDK__GET_CALL_ARGS_REQUEST__INIT;
+  static const Xchain__GetCallArgsRequest init_value = XCHAIN__GET_CALL_ARGS_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__get_call_args_request__get_packed_size
-                     (const Xchain__Contract__Sdk__GetCallArgsRequest *message)
+size_t xchain__get_call_args_request__get_packed_size
+                     (const Xchain__GetCallArgsRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_call_args_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_call_args_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__get_call_args_request__pack
-                     (const Xchain__Contract__Sdk__GetCallArgsRequest *message,
+size_t xchain__get_call_args_request__pack
+                     (const Xchain__GetCallArgsRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_call_args_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_call_args_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__get_call_args_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__GetCallArgsRequest *message,
+size_t xchain__get_call_args_request__pack_to_buffer
+                     (const Xchain__GetCallArgsRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_call_args_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_call_args_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__GetCallArgsRequest *
-       xchain__contract__sdk__get_call_args_request__unpack
+Xchain__GetCallArgsRequest *
+       xchain__get_call_args_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__GetCallArgsRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__get_call_args_request__descriptor,
+  return (Xchain__GetCallArgsRequest *)
+     protobuf_c_message_unpack (&xchain__get_call_args_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__get_call_args_request__free_unpacked
-                     (Xchain__Contract__Sdk__GetCallArgsRequest *message,
+void   xchain__get_call_args_request__free_unpacked
+                     (Xchain__GetCallArgsRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__get_call_args_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_call_args_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__tx_input__init
-                     (Xchain__Contract__Sdk__TxInput         *message)
+void   xchain__tx_input__init
+                     (Xchain__TxInput         *message)
 {
-  static const Xchain__Contract__Sdk__TxInput init_value = XCHAIN__CONTRACT__SDK__TX_INPUT__INIT;
+  static const Xchain__TxInput init_value = XCHAIN__TX_INPUT__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__tx_input__get_packed_size
-                     (const Xchain__Contract__Sdk__TxInput *message)
+size_t xchain__tx_input__get_packed_size
+                     (const Xchain__TxInput *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__tx_input__descriptor);
+  assert(message->base.descriptor == &xchain__tx_input__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__tx_input__pack
-                     (const Xchain__Contract__Sdk__TxInput *message,
+size_t xchain__tx_input__pack
+                     (const Xchain__TxInput *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__tx_input__descriptor);
+  assert(message->base.descriptor == &xchain__tx_input__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__tx_input__pack_to_buffer
-                     (const Xchain__Contract__Sdk__TxInput *message,
+size_t xchain__tx_input__pack_to_buffer
+                     (const Xchain__TxInput *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__tx_input__descriptor);
+  assert(message->base.descriptor == &xchain__tx_input__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__TxInput *
-       xchain__contract__sdk__tx_input__unpack
+Xchain__TxInput *
+       xchain__tx_input__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__TxInput *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__tx_input__descriptor,
+  return (Xchain__TxInput *)
+     protobuf_c_message_unpack (&xchain__tx_input__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__tx_input__free_unpacked
-                     (Xchain__Contract__Sdk__TxInput *message,
+void   xchain__tx_input__free_unpacked
+                     (Xchain__TxInput *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__tx_input__descriptor);
+  assert(message->base.descriptor == &xchain__tx_input__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__tx_output__init
-                     (Xchain__Contract__Sdk__TxOutput         *message)
+void   xchain__tx_output__init
+                     (Xchain__TxOutput         *message)
 {
-  static const Xchain__Contract__Sdk__TxOutput init_value = XCHAIN__CONTRACT__SDK__TX_OUTPUT__INIT;
+  static const Xchain__TxOutput init_value = XCHAIN__TX_OUTPUT__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__tx_output__get_packed_size
-                     (const Xchain__Contract__Sdk__TxOutput *message)
+size_t xchain__tx_output__get_packed_size
+                     (const Xchain__TxOutput *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__tx_output__descriptor);
+  assert(message->base.descriptor == &xchain__tx_output__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__tx_output__pack
-                     (const Xchain__Contract__Sdk__TxOutput *message,
+size_t xchain__tx_output__pack
+                     (const Xchain__TxOutput *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__tx_output__descriptor);
+  assert(message->base.descriptor == &xchain__tx_output__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__tx_output__pack_to_buffer
-                     (const Xchain__Contract__Sdk__TxOutput *message,
+size_t xchain__tx_output__pack_to_buffer
+                     (const Xchain__TxOutput *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__tx_output__descriptor);
+  assert(message->base.descriptor == &xchain__tx_output__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__TxOutput *
-       xchain__contract__sdk__tx_output__unpack
+Xchain__TxOutput *
+       xchain__tx_output__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__TxOutput *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__tx_output__descriptor,
+  return (Xchain__TxOutput *)
+     protobuf_c_message_unpack (&xchain__tx_output__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__tx_output__free_unpacked
-                     (Xchain__Contract__Sdk__TxOutput *message,
+void   xchain__tx_output__free_unpacked
+                     (Xchain__TxOutput *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__tx_output__descriptor);
+  assert(message->base.descriptor == &xchain__tx_output__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__transaction__init
-                     (Xchain__Contract__Sdk__Transaction         *message)
+void   xchain__transaction__init
+                     (Xchain__Transaction         *message)
 {
-  static const Xchain__Contract__Sdk__Transaction init_value = XCHAIN__CONTRACT__SDK__TRANSACTION__INIT;
+  static const Xchain__Transaction init_value = XCHAIN__TRANSACTION__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__transaction__get_packed_size
-                     (const Xchain__Contract__Sdk__Transaction *message)
+size_t xchain__transaction__get_packed_size
+                     (const Xchain__Transaction *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__transaction__descriptor);
+  assert(message->base.descriptor == &xchain__transaction__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__transaction__pack
-                     (const Xchain__Contract__Sdk__Transaction *message,
+size_t xchain__transaction__pack
+                     (const Xchain__Transaction *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__transaction__descriptor);
+  assert(message->base.descriptor == &xchain__transaction__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__transaction__pack_to_buffer
-                     (const Xchain__Contract__Sdk__Transaction *message,
+size_t xchain__transaction__pack_to_buffer
+                     (const Xchain__Transaction *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__transaction__descriptor);
+  assert(message->base.descriptor == &xchain__transaction__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__Transaction *
-       xchain__contract__sdk__transaction__unpack
+Xchain__Transaction *
+       xchain__transaction__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__Transaction *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__transaction__descriptor,
+  return (Xchain__Transaction *)
+     protobuf_c_message_unpack (&xchain__transaction__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__transaction__free_unpacked
-                     (Xchain__Contract__Sdk__Transaction *message,
+void   xchain__transaction__free_unpacked
+                     (Xchain__Transaction *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__transaction__descriptor);
+  assert(message->base.descriptor == &xchain__transaction__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__block__init
-                     (Xchain__Contract__Sdk__Block         *message)
+void   xchain__block__init
+                     (Xchain__Block         *message)
 {
-  static const Xchain__Contract__Sdk__Block init_value = XCHAIN__CONTRACT__SDK__BLOCK__INIT;
+  static const Xchain__Block init_value = XCHAIN__BLOCK__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__block__get_packed_size
-                     (const Xchain__Contract__Sdk__Block *message)
+size_t xchain__block__get_packed_size
+                     (const Xchain__Block *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__block__descriptor);
+  assert(message->base.descriptor == &xchain__block__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__block__pack
-                     (const Xchain__Contract__Sdk__Block *message,
+size_t xchain__block__pack
+                     (const Xchain__Block *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__block__descriptor);
+  assert(message->base.descriptor == &xchain__block__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__block__pack_to_buffer
-                     (const Xchain__Contract__Sdk__Block *message,
+size_t xchain__block__pack_to_buffer
+                     (const Xchain__Block *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__block__descriptor);
+  assert(message->base.descriptor == &xchain__block__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__Block *
-       xchain__contract__sdk__block__unpack
+Xchain__Block *
+       xchain__block__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__Block *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__block__descriptor,
+  return (Xchain__Block *)
+     protobuf_c_message_unpack (&xchain__block__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__block__free_unpacked
-                     (Xchain__Contract__Sdk__Block *message,
+void   xchain__block__free_unpacked
+                     (Xchain__Block *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__block__descriptor);
+  assert(message->base.descriptor == &xchain__block__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__get_account_addresses_request__init
-                     (Xchain__Contract__Sdk__GetAccountAddressesRequest         *message)
+void   xchain__get_account_addresses_request__init
+                     (Xchain__GetAccountAddressesRequest         *message)
 {
-  static const Xchain__Contract__Sdk__GetAccountAddressesRequest init_value = XCHAIN__CONTRACT__SDK__GET_ACCOUNT_ADDRESSES_REQUEST__INIT;
+  static const Xchain__GetAccountAddressesRequest init_value = XCHAIN__GET_ACCOUNT_ADDRESSES_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__get_account_addresses_request__get_packed_size
-                     (const Xchain__Contract__Sdk__GetAccountAddressesRequest *message)
+size_t xchain__get_account_addresses_request__get_packed_size
+                     (const Xchain__GetAccountAddressesRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_account_addresses_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_account_addresses_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__get_account_addresses_request__pack
-                     (const Xchain__Contract__Sdk__GetAccountAddressesRequest *message,
+size_t xchain__get_account_addresses_request__pack
+                     (const Xchain__GetAccountAddressesRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_account_addresses_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_account_addresses_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__get_account_addresses_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__GetAccountAddressesRequest *message,
+size_t xchain__get_account_addresses_request__pack_to_buffer
+                     (const Xchain__GetAccountAddressesRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_account_addresses_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_account_addresses_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__GetAccountAddressesRequest *
-       xchain__contract__sdk__get_account_addresses_request__unpack
+Xchain__GetAccountAddressesRequest *
+       xchain__get_account_addresses_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__GetAccountAddressesRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__get_account_addresses_request__descriptor,
+  return (Xchain__GetAccountAddressesRequest *)
+     protobuf_c_message_unpack (&xchain__get_account_addresses_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__get_account_addresses_request__free_unpacked
-                     (Xchain__Contract__Sdk__GetAccountAddressesRequest *message,
+void   xchain__get_account_addresses_request__free_unpacked
+                     (Xchain__GetAccountAddressesRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__get_account_addresses_request__descriptor);
+  assert(message->base.descriptor == &xchain__get_account_addresses_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__get_account_addresses_response__init
-                     (Xchain__Contract__Sdk__GetAccountAddressesResponse         *message)
+void   xchain__get_account_addresses_response__init
+                     (Xchain__GetAccountAddressesResponse         *message)
 {
-  static const Xchain__Contract__Sdk__GetAccountAddressesResponse init_value = XCHAIN__CONTRACT__SDK__GET_ACCOUNT_ADDRESSES_RESPONSE__INIT;
+  static const Xchain__GetAccountAddressesResponse init_value = XCHAIN__GET_ACCOUNT_ADDRESSES_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__get_account_addresses_response__get_packed_size
-                     (const Xchain__Contract__Sdk__GetAccountAddressesResponse *message)
+size_t xchain__get_account_addresses_response__get_packed_size
+                     (const Xchain__GetAccountAddressesResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_account_addresses_response__descriptor);
+  assert(message->base.descriptor == &xchain__get_account_addresses_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__get_account_addresses_response__pack
-                     (const Xchain__Contract__Sdk__GetAccountAddressesResponse *message,
+size_t xchain__get_account_addresses_response__pack
+                     (const Xchain__GetAccountAddressesResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_account_addresses_response__descriptor);
+  assert(message->base.descriptor == &xchain__get_account_addresses_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__get_account_addresses_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__GetAccountAddressesResponse *message,
+size_t xchain__get_account_addresses_response__pack_to_buffer
+                     (const Xchain__GetAccountAddressesResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__get_account_addresses_response__descriptor);
+  assert(message->base.descriptor == &xchain__get_account_addresses_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__GetAccountAddressesResponse *
-       xchain__contract__sdk__get_account_addresses_response__unpack
+Xchain__GetAccountAddressesResponse *
+       xchain__get_account_addresses_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__GetAccountAddressesResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__get_account_addresses_response__descriptor,
+  return (Xchain__GetAccountAddressesResponse *)
+     protobuf_c_message_unpack (&xchain__get_account_addresses_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__get_account_addresses_response__free_unpacked
-                     (Xchain__Contract__Sdk__GetAccountAddressesResponse *message,
+void   xchain__get_account_addresses_response__free_unpacked
+                     (Xchain__GetAccountAddressesResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__get_account_addresses_response__descriptor);
+  assert(message->base.descriptor == &xchain__get_account_addresses_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__post_log_request__init
-                     (Xchain__Contract__Sdk__PostLogRequest         *message)
+void   xchain__post_log_request__init
+                     (Xchain__PostLogRequest         *message)
 {
-  static const Xchain__Contract__Sdk__PostLogRequest init_value = XCHAIN__CONTRACT__SDK__POST_LOG_REQUEST__INIT;
+  static const Xchain__PostLogRequest init_value = XCHAIN__POST_LOG_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__post_log_request__get_packed_size
-                     (const Xchain__Contract__Sdk__PostLogRequest *message)
+size_t xchain__post_log_request__get_packed_size
+                     (const Xchain__PostLogRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__post_log_request__descriptor);
+  assert(message->base.descriptor == &xchain__post_log_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__post_log_request__pack
-                     (const Xchain__Contract__Sdk__PostLogRequest *message,
+size_t xchain__post_log_request__pack
+                     (const Xchain__PostLogRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__post_log_request__descriptor);
+  assert(message->base.descriptor == &xchain__post_log_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__post_log_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__PostLogRequest *message,
+size_t xchain__post_log_request__pack_to_buffer
+                     (const Xchain__PostLogRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__post_log_request__descriptor);
+  assert(message->base.descriptor == &xchain__post_log_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__PostLogRequest *
-       xchain__contract__sdk__post_log_request__unpack
+Xchain__PostLogRequest *
+       xchain__post_log_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__PostLogRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__post_log_request__descriptor,
+  return (Xchain__PostLogRequest *)
+     protobuf_c_message_unpack (&xchain__post_log_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__post_log_request__free_unpacked
-                     (Xchain__Contract__Sdk__PostLogRequest *message,
+void   xchain__post_log_request__free_unpacked
+                     (Xchain__PostLogRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__post_log_request__descriptor);
+  assert(message->base.descriptor == &xchain__post_log_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__post_log_response__init
-                     (Xchain__Contract__Sdk__PostLogResponse         *message)
+void   xchain__post_log_response__init
+                     (Xchain__PostLogResponse         *message)
 {
-  static const Xchain__Contract__Sdk__PostLogResponse init_value = XCHAIN__CONTRACT__SDK__POST_LOG_RESPONSE__INIT;
+  static const Xchain__PostLogResponse init_value = XCHAIN__POST_LOG_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__post_log_response__get_packed_size
-                     (const Xchain__Contract__Sdk__PostLogResponse *message)
+size_t xchain__post_log_response__get_packed_size
+                     (const Xchain__PostLogResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__post_log_response__descriptor);
+  assert(message->base.descriptor == &xchain__post_log_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__post_log_response__pack
-                     (const Xchain__Contract__Sdk__PostLogResponse *message,
+size_t xchain__post_log_response__pack
+                     (const Xchain__PostLogResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__post_log_response__descriptor);
+  assert(message->base.descriptor == &xchain__post_log_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__post_log_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__PostLogResponse *message,
+size_t xchain__post_log_response__pack_to_buffer
+                     (const Xchain__PostLogResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__post_log_response__descriptor);
+  assert(message->base.descriptor == &xchain__post_log_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__PostLogResponse *
-       xchain__contract__sdk__post_log_response__unpack
+Xchain__PostLogResponse *
+       xchain__post_log_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__PostLogResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__post_log_response__descriptor,
+  return (Xchain__PostLogResponse *)
+     protobuf_c_message_unpack (&xchain__post_log_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__post_log_response__free_unpacked
-                     (Xchain__Contract__Sdk__PostLogResponse *message,
+void   xchain__post_log_response__free_unpacked
+                     (Xchain__PostLogResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__post_log_response__descriptor);
+  assert(message->base.descriptor == &xchain__post_log_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__emit_event_request__init
-                     (Xchain__Contract__Sdk__EmitEventRequest         *message)
+void   xchain__emit_event_request__init
+                     (Xchain__EmitEventRequest         *message)
 {
-  static const Xchain__Contract__Sdk__EmitEventRequest init_value = XCHAIN__CONTRACT__SDK__EMIT_EVENT_REQUEST__INIT;
+  static const Xchain__EmitEventRequest init_value = XCHAIN__EMIT_EVENT_REQUEST__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__emit_event_request__get_packed_size
-                     (const Xchain__Contract__Sdk__EmitEventRequest *message)
+size_t xchain__emit_event_request__get_packed_size
+                     (const Xchain__EmitEventRequest *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__emit_event_request__descriptor);
+  assert(message->base.descriptor == &xchain__emit_event_request__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__emit_event_request__pack
-                     (const Xchain__Contract__Sdk__EmitEventRequest *message,
+size_t xchain__emit_event_request__pack
+                     (const Xchain__EmitEventRequest *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__emit_event_request__descriptor);
+  assert(message->base.descriptor == &xchain__emit_event_request__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__emit_event_request__pack_to_buffer
-                     (const Xchain__Contract__Sdk__EmitEventRequest *message,
+size_t xchain__emit_event_request__pack_to_buffer
+                     (const Xchain__EmitEventRequest *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__emit_event_request__descriptor);
+  assert(message->base.descriptor == &xchain__emit_event_request__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__EmitEventRequest *
-       xchain__contract__sdk__emit_event_request__unpack
+Xchain__EmitEventRequest *
+       xchain__emit_event_request__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__EmitEventRequest *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__emit_event_request__descriptor,
+  return (Xchain__EmitEventRequest *)
+     protobuf_c_message_unpack (&xchain__emit_event_request__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__emit_event_request__free_unpacked
-                     (Xchain__Contract__Sdk__EmitEventRequest *message,
+void   xchain__emit_event_request__free_unpacked
+                     (Xchain__EmitEventRequest *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__emit_event_request__descriptor);
+  assert(message->base.descriptor == &xchain__emit_event_request__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-void   xchain__contract__sdk__emit_event_response__init
-                     (Xchain__Contract__Sdk__EmitEventResponse         *message)
+void   xchain__emit_event_response__init
+                     (Xchain__EmitEventResponse         *message)
 {
-  static const Xchain__Contract__Sdk__EmitEventResponse init_value = XCHAIN__CONTRACT__SDK__EMIT_EVENT_RESPONSE__INIT;
+  static const Xchain__EmitEventResponse init_value = XCHAIN__EMIT_EVENT_RESPONSE__INIT;
   *message = init_value;
 }
-size_t xchain__contract__sdk__emit_event_response__get_packed_size
-                     (const Xchain__Contract__Sdk__EmitEventResponse *message)
+size_t xchain__emit_event_response__get_packed_size
+                     (const Xchain__EmitEventResponse *message)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__emit_event_response__descriptor);
+  assert(message->base.descriptor == &xchain__emit_event_response__descriptor);
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
-size_t xchain__contract__sdk__emit_event_response__pack
-                     (const Xchain__Contract__Sdk__EmitEventResponse *message,
+size_t xchain__emit_event_response__pack
+                     (const Xchain__EmitEventResponse *message,
                       uint8_t       *out)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__emit_event_response__descriptor);
+  assert(message->base.descriptor == &xchain__emit_event_response__descriptor);
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
-size_t xchain__contract__sdk__emit_event_response__pack_to_buffer
-                     (const Xchain__Contract__Sdk__EmitEventResponse *message,
+size_t xchain__emit_event_response__pack_to_buffer
+                     (const Xchain__EmitEventResponse *message,
                       ProtobufCBuffer *buffer)
 {
-  assert(message->base.descriptor == &xchain__contract__sdk__emit_event_response__descriptor);
+  assert(message->base.descriptor == &xchain__emit_event_response__descriptor);
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
-Xchain__Contract__Sdk__EmitEventResponse *
-       xchain__contract__sdk__emit_event_response__unpack
+Xchain__EmitEventResponse *
+       xchain__emit_event_response__unpack
                      (ProtobufCAllocator  *allocator,
                       size_t               len,
                       const uint8_t       *data)
 {
-  return (Xchain__Contract__Sdk__EmitEventResponse *)
-     protobuf_c_message_unpack (&xchain__contract__sdk__emit_event_response__descriptor,
+  return (Xchain__EmitEventResponse *)
+     protobuf_c_message_unpack (&xchain__emit_event_response__descriptor,
                                 allocator, len, data);
 }
-void   xchain__contract__sdk__emit_event_response__free_unpacked
-                     (Xchain__Contract__Sdk__EmitEventResponse *message,
+void   xchain__emit_event_response__free_unpacked
+                     (Xchain__EmitEventResponse *message,
                       ProtobufCAllocator *allocator)
 {
   if(!message)
     return;
-  assert(message->base.descriptor == &xchain__contract__sdk__emit_event_response__descriptor);
+  assert(message->base.descriptor == &xchain__emit_event_response__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-#define xchain__contract__sdk__ping_request__field_descriptors NULL
-#define xchain__contract__sdk__ping_request__field_indices_by_name NULL
-#define xchain__contract__sdk__ping_request__number_ranges NULL
-const ProtobufCMessageDescriptor xchain__contract__sdk__ping_request__descriptor =
+#define xchain__ping_request__field_descriptors NULL
+#define xchain__ping_request__field_indices_by_name NULL
+#define xchain__ping_request__number_ranges NULL
+const ProtobufCMessageDescriptor xchain__ping_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.PingRequest",
+  "xchain.PingRequest",
   "PingRequest",
-  "Xchain__Contract__Sdk__PingRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__PingRequest),
+  "Xchain__PingRequest",
+  "xchain",
+  sizeof(Xchain__PingRequest),
   0,
-  xchain__contract__sdk__ping_request__field_descriptors,
-  xchain__contract__sdk__ping_request__field_indices_by_name,
-  0,  xchain__contract__sdk__ping_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__ping_request__init,
+  xchain__ping_request__field_descriptors,
+  xchain__ping_request__field_indices_by_name,
+  0,  xchain__ping_request__number_ranges,
+  (ProtobufCMessageInit) xchain__ping_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-#define xchain__contract__sdk__ping_response__field_descriptors NULL
-#define xchain__contract__sdk__ping_response__field_indices_by_name NULL
-#define xchain__contract__sdk__ping_response__number_ranges NULL
-const ProtobufCMessageDescriptor xchain__contract__sdk__ping_response__descriptor =
+#define xchain__ping_response__field_descriptors NULL
+#define xchain__ping_response__field_indices_by_name NULL
+#define xchain__ping_response__number_ranges NULL
+const ProtobufCMessageDescriptor xchain__ping_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.PingResponse",
+  "xchain.PingResponse",
   "PingResponse",
-  "Xchain__Contract__Sdk__PingResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__PingResponse),
+  "Xchain__PingResponse",
+  "xchain",
+  sizeof(Xchain__PingResponse),
   0,
-  xchain__contract__sdk__ping_response__field_descriptors,
-  xchain__contract__sdk__ping_response__field_indices_by_name,
-  0,  xchain__contract__sdk__ping_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__ping_response__init,
+  xchain__ping_response__field_descriptors,
+  xchain__ping_response__field_indices_by_name,
+  0,  xchain__ping_response__number_ranges,
+  (ProtobufCMessageInit) xchain__ping_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__native_call_request__field_descriptors[1] =
+static const ProtobufCFieldDescriptor xchain__native_call_request__field_descriptors[1] =
 {
   {
     "ctxid",
@@ -1851,55 +1851,55 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__native_call_request
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_INT64,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__NativeCallRequest, ctxid),
+    offsetof(Xchain__NativeCallRequest, ctxid),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__native_call_request__field_indices_by_name[] = {
+static const unsigned xchain__native_call_request__field_indices_by_name[] = {
   0,   /* field[0] = ctxid */
 };
-static const ProtobufCIntRange xchain__contract__sdk__native_call_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__native_call_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__native_call_request__descriptor =
+const ProtobufCMessageDescriptor xchain__native_call_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.NativeCallRequest",
+  "xchain.NativeCallRequest",
   "NativeCallRequest",
-  "Xchain__Contract__Sdk__NativeCallRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__NativeCallRequest),
+  "Xchain__NativeCallRequest",
+  "xchain",
+  sizeof(Xchain__NativeCallRequest),
   1,
-  xchain__contract__sdk__native_call_request__field_descriptors,
-  xchain__contract__sdk__native_call_request__field_indices_by_name,
-  1,  xchain__contract__sdk__native_call_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__native_call_request__init,
+  xchain__native_call_request__field_descriptors,
+  xchain__native_call_request__field_indices_by_name,
+  1,  xchain__native_call_request__number_ranges,
+  (ProtobufCMessageInit) xchain__native_call_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-#define xchain__contract__sdk__native_call_response__field_descriptors NULL
-#define xchain__contract__sdk__native_call_response__field_indices_by_name NULL
-#define xchain__contract__sdk__native_call_response__number_ranges NULL
-const ProtobufCMessageDescriptor xchain__contract__sdk__native_call_response__descriptor =
+#define xchain__native_call_response__field_descriptors NULL
+#define xchain__native_call_response__field_indices_by_name NULL
+#define xchain__native_call_response__number_ranges NULL
+const ProtobufCMessageDescriptor xchain__native_call_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.NativeCallResponse",
+  "xchain.NativeCallResponse",
   "NativeCallResponse",
-  "Xchain__Contract__Sdk__NativeCallResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__NativeCallResponse),
+  "Xchain__NativeCallResponse",
+  "xchain",
+  sizeof(Xchain__NativeCallResponse),
   0,
-  xchain__contract__sdk__native_call_response__field_descriptors,
-  xchain__contract__sdk__native_call_response__field_indices_by_name,
-  0,  xchain__contract__sdk__native_call_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__native_call_response__init,
+  xchain__native_call_response__field_descriptors,
+  xchain__native_call_response__field_indices_by_name,
+  0,  xchain__native_call_response__number_ranges,
+  (ProtobufCMessageInit) xchain__native_call_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__arg_pair__field_descriptors[2] =
+static const ProtobufCFieldDescriptor xchain__arg_pair__field_descriptors[2] =
 {
   {
     "key",
@@ -1907,7 +1907,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__arg_pair__field_des
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__ArgPair, key),
+    offsetof(Xchain__ArgPair, key),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -1919,38 +1919,38 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__arg_pair__field_des
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__ArgPair, value),
+    offsetof(Xchain__ArgPair, value),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__arg_pair__field_indices_by_name[] = {
+static const unsigned xchain__arg_pair__field_indices_by_name[] = {
   0,   /* field[0] = key */
   1,   /* field[1] = value */
 };
-static const ProtobufCIntRange xchain__contract__sdk__arg_pair__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__arg_pair__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__arg_pair__descriptor =
+const ProtobufCMessageDescriptor xchain__arg_pair__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.ArgPair",
+  "xchain.ArgPair",
   "ArgPair",
-  "Xchain__Contract__Sdk__ArgPair",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__ArgPair),
+  "Xchain__ArgPair",
+  "xchain",
+  sizeof(Xchain__ArgPair),
   2,
-  xchain__contract__sdk__arg_pair__field_descriptors,
-  xchain__contract__sdk__arg_pair__field_indices_by_name,
-  1,  xchain__contract__sdk__arg_pair__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__arg_pair__init,
+  xchain__arg_pair__field_descriptors,
+  xchain__arg_pair__field_indices_by_name,
+  1,  xchain__arg_pair__number_ranges,
+  (ProtobufCMessageInit) xchain__arg_pair__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__call_args__field_descriptors[5] =
+static const ProtobufCFieldDescriptor xchain__call_args__field_descriptors[5] =
 {
   {
     "method",
@@ -1958,7 +1958,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__call_args__field_de
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__CallArgs, method),
+    offsetof(Xchain__CallArgs, method),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -1969,9 +1969,9 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__call_args__field_de
     2,
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_MESSAGE,
-    offsetof(Xchain__Contract__Sdk__CallArgs, n_args),
-    offsetof(Xchain__Contract__Sdk__CallArgs, args),
-    &xchain__contract__sdk__arg_pair__descriptor,
+    offsetof(Xchain__CallArgs, n_args),
+    offsetof(Xchain__CallArgs, args),
+    &xchain__arg_pair__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -1982,7 +1982,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__call_args__field_de
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__CallArgs, initiator),
+    offsetof(Xchain__CallArgs, initiator),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -1993,8 +1993,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__call_args__field_de
     4,
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_STRING,
-    offsetof(Xchain__Contract__Sdk__CallArgs, n_auth_require),
-    offsetof(Xchain__Contract__Sdk__CallArgs, auth_require),
+    offsetof(Xchain__CallArgs, n_auth_require),
+    offsetof(Xchain__CallArgs, auth_require),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -2006,41 +2006,41 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__call_args__field_de
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__CallArgs, transfer_amount),
+    offsetof(Xchain__CallArgs, transfer_amount),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__call_args__field_indices_by_name[] = {
+static const unsigned xchain__call_args__field_indices_by_name[] = {
   1,   /* field[1] = args */
   3,   /* field[3] = auth_require */
   2,   /* field[2] = initiator */
   0,   /* field[0] = method */
   4,   /* field[4] = transfer_amount */
 };
-static const ProtobufCIntRange xchain__contract__sdk__call_args__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__call_args__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 5 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__call_args__descriptor =
+const ProtobufCMessageDescriptor xchain__call_args__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.CallArgs",
+  "xchain.CallArgs",
   "CallArgs",
-  "Xchain__Contract__Sdk__CallArgs",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__CallArgs),
+  "Xchain__CallArgs",
+  "xchain",
+  sizeof(Xchain__CallArgs),
   5,
-  xchain__contract__sdk__call_args__field_descriptors,
-  xchain__contract__sdk__call_args__field_indices_by_name,
-  1,  xchain__contract__sdk__call_args__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__call_args__init,
+  xchain__call_args__field_descriptors,
+  xchain__call_args__field_indices_by_name,
+  1,  xchain__call_args__number_ranges,
+  (ProtobufCMessageInit) xchain__call_args__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__syscall_header__field_descriptors[1] =
+static const ProtobufCFieldDescriptor xchain__syscall_header__field_descriptors[1] =
 {
   {
     "ctxid",
@@ -2048,37 +2048,37 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__syscall_header__fie
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_INT64,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__SyscallHeader, ctxid),
+    offsetof(Xchain__SyscallHeader, ctxid),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__syscall_header__field_indices_by_name[] = {
+static const unsigned xchain__syscall_header__field_indices_by_name[] = {
   0,   /* field[0] = ctxid */
 };
-static const ProtobufCIntRange xchain__contract__sdk__syscall_header__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__syscall_header__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__syscall_header__descriptor =
+const ProtobufCMessageDescriptor xchain__syscall_header__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.SyscallHeader",
+  "xchain.SyscallHeader",
   "SyscallHeader",
-  "Xchain__Contract__Sdk__SyscallHeader",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__SyscallHeader),
+  "Xchain__SyscallHeader",
+  "xchain",
+  sizeof(Xchain__SyscallHeader),
   1,
-  xchain__contract__sdk__syscall_header__field_descriptors,
-  xchain__contract__sdk__syscall_header__field_indices_by_name,
-  1,  xchain__contract__sdk__syscall_header__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__syscall_header__init,
+  xchain__syscall_header__field_descriptors,
+  xchain__syscall_header__field_indices_by_name,
+  1,  xchain__syscall_header__number_ranges,
+  (ProtobufCMessageInit) xchain__syscall_header__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__put_request__field_descriptors[3] =
+static const ProtobufCFieldDescriptor xchain__put_request__field_descriptors[3] =
 {
   {
     "header",
@@ -2086,8 +2086,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__put_request__field_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__PutRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__PutRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2098,7 +2098,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__put_request__field_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__PutRequest, key),
+    offsetof(Xchain__PutRequest, key),
     NULL,
     NULL,
     0,             /* flags */
@@ -2110,57 +2110,57 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__put_request__field_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__PutRequest, value),
+    offsetof(Xchain__PutRequest, value),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__put_request__field_indices_by_name[] = {
+static const unsigned xchain__put_request__field_indices_by_name[] = {
   0,   /* field[0] = header */
   1,   /* field[1] = key */
   2,   /* field[2] = value */
 };
-static const ProtobufCIntRange xchain__contract__sdk__put_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__put_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 3 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__put_request__descriptor =
+const ProtobufCMessageDescriptor xchain__put_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.PutRequest",
+  "xchain.PutRequest",
   "PutRequest",
-  "Xchain__Contract__Sdk__PutRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__PutRequest),
+  "Xchain__PutRequest",
+  "xchain",
+  sizeof(Xchain__PutRequest),
   3,
-  xchain__contract__sdk__put_request__field_descriptors,
-  xchain__contract__sdk__put_request__field_indices_by_name,
-  1,  xchain__contract__sdk__put_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__put_request__init,
+  xchain__put_request__field_descriptors,
+  xchain__put_request__field_indices_by_name,
+  1,  xchain__put_request__number_ranges,
+  (ProtobufCMessageInit) xchain__put_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-#define xchain__contract__sdk__put_response__field_descriptors NULL
-#define xchain__contract__sdk__put_response__field_indices_by_name NULL
-#define xchain__contract__sdk__put_response__number_ranges NULL
-const ProtobufCMessageDescriptor xchain__contract__sdk__put_response__descriptor =
+#define xchain__put_response__field_descriptors NULL
+#define xchain__put_response__field_indices_by_name NULL
+#define xchain__put_response__number_ranges NULL
+const ProtobufCMessageDescriptor xchain__put_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.PutResponse",
+  "xchain.PutResponse",
   "PutResponse",
-  "Xchain__Contract__Sdk__PutResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__PutResponse),
+  "Xchain__PutResponse",
+  "xchain",
+  sizeof(Xchain__PutResponse),
   0,
-  xchain__contract__sdk__put_response__field_descriptors,
-  xchain__contract__sdk__put_response__field_indices_by_name,
-  0,  xchain__contract__sdk__put_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__put_response__init,
+  xchain__put_response__field_descriptors,
+  xchain__put_response__field_indices_by_name,
+  0,  xchain__put_response__number_ranges,
+  (ProtobufCMessageInit) xchain__put_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__get_request__field_descriptors[2] =
+static const ProtobufCFieldDescriptor xchain__get_request__field_descriptors[2] =
 {
   {
     "header",
@@ -2168,8 +2168,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__get_request__field_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__GetRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__GetRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2180,38 +2180,38 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__get_request__field_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__GetRequest, key),
+    offsetof(Xchain__GetRequest, key),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__get_request__field_indices_by_name[] = {
+static const unsigned xchain__get_request__field_indices_by_name[] = {
   0,   /* field[0] = header */
   1,   /* field[1] = key */
 };
-static const ProtobufCIntRange xchain__contract__sdk__get_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__get_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__get_request__descriptor =
+const ProtobufCMessageDescriptor xchain__get_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.GetRequest",
+  "xchain.GetRequest",
   "GetRequest",
-  "Xchain__Contract__Sdk__GetRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__GetRequest),
+  "Xchain__GetRequest",
+  "xchain",
+  sizeof(Xchain__GetRequest),
   2,
-  xchain__contract__sdk__get_request__field_descriptors,
-  xchain__contract__sdk__get_request__field_indices_by_name,
-  1,  xchain__contract__sdk__get_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__get_request__init,
+  xchain__get_request__field_descriptors,
+  xchain__get_request__field_indices_by_name,
+  1,  xchain__get_request__number_ranges,
+  (ProtobufCMessageInit) xchain__get_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__get_response__field_descriptors[1] =
+static const ProtobufCFieldDescriptor xchain__get_response__field_descriptors[1] =
 {
   {
     "value",
@@ -2219,37 +2219,37 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__get_response__field
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__GetResponse, value),
+    offsetof(Xchain__GetResponse, value),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__get_response__field_indices_by_name[] = {
+static const unsigned xchain__get_response__field_indices_by_name[] = {
   0,   /* field[0] = value */
 };
-static const ProtobufCIntRange xchain__contract__sdk__get_response__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__get_response__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__get_response__descriptor =
+const ProtobufCMessageDescriptor xchain__get_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.GetResponse",
+  "xchain.GetResponse",
   "GetResponse",
-  "Xchain__Contract__Sdk__GetResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__GetResponse),
+  "Xchain__GetResponse",
+  "xchain",
+  sizeof(Xchain__GetResponse),
   1,
-  xchain__contract__sdk__get_response__field_descriptors,
-  xchain__contract__sdk__get_response__field_indices_by_name,
-  1,  xchain__contract__sdk__get_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__get_response__init,
+  xchain__get_response__field_descriptors,
+  xchain__get_response__field_indices_by_name,
+  1,  xchain__get_response__number_ranges,
+  (ProtobufCMessageInit) xchain__get_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__delete_request__field_descriptors[2] =
+static const ProtobufCFieldDescriptor xchain__delete_request__field_descriptors[2] =
 {
   {
     "header",
@@ -2257,8 +2257,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__delete_request__fie
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__DeleteRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__DeleteRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2269,56 +2269,56 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__delete_request__fie
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__DeleteRequest, key),
+    offsetof(Xchain__DeleteRequest, key),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__delete_request__field_indices_by_name[] = {
+static const unsigned xchain__delete_request__field_indices_by_name[] = {
   0,   /* field[0] = header */
   1,   /* field[1] = key */
 };
-static const ProtobufCIntRange xchain__contract__sdk__delete_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__delete_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__delete_request__descriptor =
+const ProtobufCMessageDescriptor xchain__delete_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.DeleteRequest",
+  "xchain.DeleteRequest",
   "DeleteRequest",
-  "Xchain__Contract__Sdk__DeleteRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__DeleteRequest),
+  "Xchain__DeleteRequest",
+  "xchain",
+  sizeof(Xchain__DeleteRequest),
   2,
-  xchain__contract__sdk__delete_request__field_descriptors,
-  xchain__contract__sdk__delete_request__field_indices_by_name,
-  1,  xchain__contract__sdk__delete_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__delete_request__init,
+  xchain__delete_request__field_descriptors,
+  xchain__delete_request__field_indices_by_name,
+  1,  xchain__delete_request__number_ranges,
+  (ProtobufCMessageInit) xchain__delete_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-#define xchain__contract__sdk__delete_response__field_descriptors NULL
-#define xchain__contract__sdk__delete_response__field_indices_by_name NULL
-#define xchain__contract__sdk__delete_response__number_ranges NULL
-const ProtobufCMessageDescriptor xchain__contract__sdk__delete_response__descriptor =
+#define xchain__delete_response__field_descriptors NULL
+#define xchain__delete_response__field_indices_by_name NULL
+#define xchain__delete_response__number_ranges NULL
+const ProtobufCMessageDescriptor xchain__delete_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.DeleteResponse",
+  "xchain.DeleteResponse",
   "DeleteResponse",
-  "Xchain__Contract__Sdk__DeleteResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__DeleteResponse),
+  "Xchain__DeleteResponse",
+  "xchain",
+  sizeof(Xchain__DeleteResponse),
   0,
-  xchain__contract__sdk__delete_response__field_descriptors,
-  xchain__contract__sdk__delete_response__field_indices_by_name,
-  0,  xchain__contract__sdk__delete_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__delete_response__init,
+  xchain__delete_response__field_descriptors,
+  xchain__delete_response__field_indices_by_name,
+  0,  xchain__delete_response__number_ranges,
+  (ProtobufCMessageInit) xchain__delete_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__iterator_request__field_descriptors[4] =
+static const ProtobufCFieldDescriptor xchain__iterator_request__field_descriptors[4] =
 {
   {
     "header",
@@ -2326,8 +2326,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__iterator_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__IteratorRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__IteratorRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2338,7 +2338,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__iterator_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__IteratorRequest, start),
+    offsetof(Xchain__IteratorRequest, start),
     NULL,
     NULL,
     0,             /* flags */
@@ -2350,7 +2350,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__iterator_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__IteratorRequest, limit),
+    offsetof(Xchain__IteratorRequest, limit),
     NULL,
     NULL,
     0,             /* flags */
@@ -2362,40 +2362,40 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__iterator_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_INT32,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__IteratorRequest, cap),
+    offsetof(Xchain__IteratorRequest, cap),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__iterator_request__field_indices_by_name[] = {
+static const unsigned xchain__iterator_request__field_indices_by_name[] = {
   3,   /* field[3] = cap */
   0,   /* field[0] = header */
   2,   /* field[2] = limit */
   1,   /* field[1] = start */
 };
-static const ProtobufCIntRange xchain__contract__sdk__iterator_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__iterator_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 4 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__iterator_request__descriptor =
+const ProtobufCMessageDescriptor xchain__iterator_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.IteratorRequest",
+  "xchain.IteratorRequest",
   "IteratorRequest",
-  "Xchain__Contract__Sdk__IteratorRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__IteratorRequest),
+  "Xchain__IteratorRequest",
+  "xchain",
+  sizeof(Xchain__IteratorRequest),
   4,
-  xchain__contract__sdk__iterator_request__field_descriptors,
-  xchain__contract__sdk__iterator_request__field_indices_by_name,
-  1,  xchain__contract__sdk__iterator_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__iterator_request__init,
+  xchain__iterator_request__field_descriptors,
+  xchain__iterator_request__field_indices_by_name,
+  1,  xchain__iterator_request__number_ranges,
+  (ProtobufCMessageInit) xchain__iterator_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__iterator_item__field_descriptors[2] =
+static const ProtobufCFieldDescriptor xchain__iterator_item__field_descriptors[2] =
 {
   {
     "key",
@@ -2403,7 +2403,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__iterator_item__fiel
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__IteratorItem, key),
+    offsetof(Xchain__IteratorItem, key),
     NULL,
     NULL,
     0,             /* flags */
@@ -2415,76 +2415,76 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__iterator_item__fiel
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__IteratorItem, value),
+    offsetof(Xchain__IteratorItem, value),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__iterator_item__field_indices_by_name[] = {
+static const unsigned xchain__iterator_item__field_indices_by_name[] = {
   0,   /* field[0] = key */
   1,   /* field[1] = value */
 };
-static const ProtobufCIntRange xchain__contract__sdk__iterator_item__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__iterator_item__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__iterator_item__descriptor =
+const ProtobufCMessageDescriptor xchain__iterator_item__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.IteratorItem",
+  "xchain.IteratorItem",
   "IteratorItem",
-  "Xchain__Contract__Sdk__IteratorItem",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__IteratorItem),
+  "Xchain__IteratorItem",
+  "xchain",
+  sizeof(Xchain__IteratorItem),
   2,
-  xchain__contract__sdk__iterator_item__field_descriptors,
-  xchain__contract__sdk__iterator_item__field_indices_by_name,
-  1,  xchain__contract__sdk__iterator_item__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__iterator_item__init,
+  xchain__iterator_item__field_descriptors,
+  xchain__iterator_item__field_indices_by_name,
+  1,  xchain__iterator_item__number_ranges,
+  (ProtobufCMessageInit) xchain__iterator_item__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__iterator_response__field_descriptors[1] =
+static const ProtobufCFieldDescriptor xchain__iterator_response__field_descriptors[1] =
 {
   {
     "items",
     1,
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_MESSAGE,
-    offsetof(Xchain__Contract__Sdk__IteratorResponse, n_items),
-    offsetof(Xchain__Contract__Sdk__IteratorResponse, items),
-    &xchain__contract__sdk__iterator_item__descriptor,
+    offsetof(Xchain__IteratorResponse, n_items),
+    offsetof(Xchain__IteratorResponse, items),
+    &xchain__iterator_item__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__iterator_response__field_indices_by_name[] = {
+static const unsigned xchain__iterator_response__field_indices_by_name[] = {
   0,   /* field[0] = items */
 };
-static const ProtobufCIntRange xchain__contract__sdk__iterator_response__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__iterator_response__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__iterator_response__descriptor =
+const ProtobufCMessageDescriptor xchain__iterator_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.IteratorResponse",
+  "xchain.IteratorResponse",
   "IteratorResponse",
-  "Xchain__Contract__Sdk__IteratorResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__IteratorResponse),
+  "Xchain__IteratorResponse",
+  "xchain",
+  sizeof(Xchain__IteratorResponse),
   1,
-  xchain__contract__sdk__iterator_response__field_descriptors,
-  xchain__contract__sdk__iterator_response__field_indices_by_name,
-  1,  xchain__contract__sdk__iterator_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__iterator_response__init,
+  xchain__iterator_response__field_descriptors,
+  xchain__iterator_response__field_indices_by_name,
+  1,  xchain__iterator_response__number_ranges,
+  (ProtobufCMessageInit) xchain__iterator_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__query_tx_request__field_descriptors[2] =
+static const ProtobufCFieldDescriptor xchain__query_tx_request__field_descriptors[2] =
 {
   {
     "header",
@@ -2492,8 +2492,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__query_tx_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__QueryTxRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__QueryTxRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2504,38 +2504,38 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__query_tx_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__QueryTxRequest, txid),
+    offsetof(Xchain__QueryTxRequest, txid),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__query_tx_request__field_indices_by_name[] = {
+static const unsigned xchain__query_tx_request__field_indices_by_name[] = {
   0,   /* field[0] = header */
   1,   /* field[1] = txid */
 };
-static const ProtobufCIntRange xchain__contract__sdk__query_tx_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__query_tx_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__query_tx_request__descriptor =
+const ProtobufCMessageDescriptor xchain__query_tx_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.QueryTxRequest",
+  "xchain.QueryTxRequest",
   "QueryTxRequest",
-  "Xchain__Contract__Sdk__QueryTxRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__QueryTxRequest),
+  "Xchain__QueryTxRequest",
+  "xchain",
+  sizeof(Xchain__QueryTxRequest),
   2,
-  xchain__contract__sdk__query_tx_request__field_descriptors,
-  xchain__contract__sdk__query_tx_request__field_indices_by_name,
-  1,  xchain__contract__sdk__query_tx_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__query_tx_request__init,
+  xchain__query_tx_request__field_descriptors,
+  xchain__query_tx_request__field_indices_by_name,
+  1,  xchain__query_tx_request__number_ranges,
+  (ProtobufCMessageInit) xchain__query_tx_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__query_tx_response__field_descriptors[1] =
+static const ProtobufCFieldDescriptor xchain__query_tx_response__field_descriptors[1] =
 {
   {
     "tx",
@@ -2543,37 +2543,37 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__query_tx_response__
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__QueryTxResponse, tx),
-    &xchain__contract__sdk__transaction__descriptor,
+    offsetof(Xchain__QueryTxResponse, tx),
+    &xchain__transaction__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__query_tx_response__field_indices_by_name[] = {
+static const unsigned xchain__query_tx_response__field_indices_by_name[] = {
   0,   /* field[0] = tx */
 };
-static const ProtobufCIntRange xchain__contract__sdk__query_tx_response__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__query_tx_response__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__query_tx_response__descriptor =
+const ProtobufCMessageDescriptor xchain__query_tx_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.QueryTxResponse",
+  "xchain.QueryTxResponse",
   "QueryTxResponse",
-  "Xchain__Contract__Sdk__QueryTxResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__QueryTxResponse),
+  "Xchain__QueryTxResponse",
+  "xchain",
+  sizeof(Xchain__QueryTxResponse),
   1,
-  xchain__contract__sdk__query_tx_response__field_descriptors,
-  xchain__contract__sdk__query_tx_response__field_indices_by_name,
-  1,  xchain__contract__sdk__query_tx_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__query_tx_response__init,
+  xchain__query_tx_response__field_descriptors,
+  xchain__query_tx_response__field_indices_by_name,
+  1,  xchain__query_tx_response__number_ranges,
+  (ProtobufCMessageInit) xchain__query_tx_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__query_block_request__field_descriptors[2] =
+static const ProtobufCFieldDescriptor xchain__query_block_request__field_descriptors[2] =
 {
   {
     "header",
@@ -2581,8 +2581,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__query_block_request
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__QueryBlockRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__QueryBlockRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2593,38 +2593,38 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__query_block_request
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__QueryBlockRequest, blockid),
+    offsetof(Xchain__QueryBlockRequest, blockid),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__query_block_request__field_indices_by_name[] = {
+static const unsigned xchain__query_block_request__field_indices_by_name[] = {
   1,   /* field[1] = blockid */
   0,   /* field[0] = header */
 };
-static const ProtobufCIntRange xchain__contract__sdk__query_block_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__query_block_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__query_block_request__descriptor =
+const ProtobufCMessageDescriptor xchain__query_block_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.QueryBlockRequest",
+  "xchain.QueryBlockRequest",
   "QueryBlockRequest",
-  "Xchain__Contract__Sdk__QueryBlockRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__QueryBlockRequest),
+  "Xchain__QueryBlockRequest",
+  "xchain",
+  sizeof(Xchain__QueryBlockRequest),
   2,
-  xchain__contract__sdk__query_block_request__field_descriptors,
-  xchain__contract__sdk__query_block_request__field_indices_by_name,
-  1,  xchain__contract__sdk__query_block_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__query_block_request__init,
+  xchain__query_block_request__field_descriptors,
+  xchain__query_block_request__field_indices_by_name,
+  1,  xchain__query_block_request__number_ranges,
+  (ProtobufCMessageInit) xchain__query_block_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__query_block_response__field_descriptors[1] =
+static const ProtobufCFieldDescriptor xchain__query_block_response__field_descriptors[1] =
 {
   {
     "block",
@@ -2632,37 +2632,37 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__query_block_respons
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__QueryBlockResponse, block),
-    &xchain__contract__sdk__block__descriptor,
+    offsetof(Xchain__QueryBlockResponse, block),
+    &xchain__block__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__query_block_response__field_indices_by_name[] = {
+static const unsigned xchain__query_block_response__field_indices_by_name[] = {
   0,   /* field[0] = block */
 };
-static const ProtobufCIntRange xchain__contract__sdk__query_block_response__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__query_block_response__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__query_block_response__descriptor =
+const ProtobufCMessageDescriptor xchain__query_block_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.QueryBlockResponse",
+  "xchain.QueryBlockResponse",
   "QueryBlockResponse",
-  "Xchain__Contract__Sdk__QueryBlockResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__QueryBlockResponse),
+  "Xchain__QueryBlockResponse",
+  "xchain",
+  sizeof(Xchain__QueryBlockResponse),
   1,
-  xchain__contract__sdk__query_block_response__field_descriptors,
-  xchain__contract__sdk__query_block_response__field_indices_by_name,
-  1,  xchain__contract__sdk__query_block_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__query_block_response__init,
+  xchain__query_block_response__field_descriptors,
+  xchain__query_block_response__field_indices_by_name,
+  1,  xchain__query_block_response__number_ranges,
+  (ProtobufCMessageInit) xchain__query_block_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__transfer_request__field_descriptors[4] =
+static const ProtobufCFieldDescriptor xchain__transfer_request__field_descriptors[4] =
 {
   {
     "header",
@@ -2670,8 +2670,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__transfer_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TransferRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__TransferRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2682,7 +2682,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__transfer_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TransferRequest, from),
+    offsetof(Xchain__TransferRequest, from),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -2694,7 +2694,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__transfer_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TransferRequest, to),
+    offsetof(Xchain__TransferRequest, to),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -2706,58 +2706,58 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__transfer_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TransferRequest, amount),
+    offsetof(Xchain__TransferRequest, amount),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__transfer_request__field_indices_by_name[] = {
+static const unsigned xchain__transfer_request__field_indices_by_name[] = {
   3,   /* field[3] = amount */
   1,   /* field[1] = from */
   0,   /* field[0] = header */
   2,   /* field[2] = to */
 };
-static const ProtobufCIntRange xchain__contract__sdk__transfer_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__transfer_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 4 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__transfer_request__descriptor =
+const ProtobufCMessageDescriptor xchain__transfer_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.TransferRequest",
+  "xchain.TransferRequest",
   "TransferRequest",
-  "Xchain__Contract__Sdk__TransferRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__TransferRequest),
+  "Xchain__TransferRequest",
+  "xchain",
+  sizeof(Xchain__TransferRequest),
   4,
-  xchain__contract__sdk__transfer_request__field_descriptors,
-  xchain__contract__sdk__transfer_request__field_indices_by_name,
-  1,  xchain__contract__sdk__transfer_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__transfer_request__init,
+  xchain__transfer_request__field_descriptors,
+  xchain__transfer_request__field_indices_by_name,
+  1,  xchain__transfer_request__number_ranges,
+  (ProtobufCMessageInit) xchain__transfer_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-#define xchain__contract__sdk__transfer_response__field_descriptors NULL
-#define xchain__contract__sdk__transfer_response__field_indices_by_name NULL
-#define xchain__contract__sdk__transfer_response__number_ranges NULL
-const ProtobufCMessageDescriptor xchain__contract__sdk__transfer_response__descriptor =
+#define xchain__transfer_response__field_descriptors NULL
+#define xchain__transfer_response__field_indices_by_name NULL
+#define xchain__transfer_response__number_ranges NULL
+const ProtobufCMessageDescriptor xchain__transfer_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.TransferResponse",
+  "xchain.TransferResponse",
   "TransferResponse",
-  "Xchain__Contract__Sdk__TransferResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__TransferResponse),
+  "Xchain__TransferResponse",
+  "xchain",
+  sizeof(Xchain__TransferResponse),
   0,
-  xchain__contract__sdk__transfer_response__field_descriptors,
-  xchain__contract__sdk__transfer_response__field_indices_by_name,
-  0,  xchain__contract__sdk__transfer_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__transfer_response__init,
+  xchain__transfer_response__field_descriptors,
+  xchain__transfer_response__field_indices_by_name,
+  0,  xchain__transfer_response__number_ranges,
+  (ProtobufCMessageInit) xchain__transfer_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__contract_call_request__field_descriptors[5] =
+static const ProtobufCFieldDescriptor xchain__contract_call_request__field_descriptors[5] =
 {
   {
     "header",
@@ -2765,8 +2765,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__contract_call_reque
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__ContractCallRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__ContractCallRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2777,7 +2777,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__contract_call_reque
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__ContractCallRequest, module),
+    offsetof(Xchain__ContractCallRequest, module),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -2789,7 +2789,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__contract_call_reque
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__ContractCallRequest, contract),
+    offsetof(Xchain__ContractCallRequest, contract),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -2801,7 +2801,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__contract_call_reque
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__ContractCallRequest, method),
+    offsetof(Xchain__ContractCallRequest, method),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -2812,42 +2812,42 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__contract_call_reque
     5,
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_MESSAGE,
-    offsetof(Xchain__Contract__Sdk__ContractCallRequest, n_args),
-    offsetof(Xchain__Contract__Sdk__ContractCallRequest, args),
-    &xchain__contract__sdk__arg_pair__descriptor,
+    offsetof(Xchain__ContractCallRequest, n_args),
+    offsetof(Xchain__ContractCallRequest, args),
+    &xchain__arg_pair__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__contract_call_request__field_indices_by_name[] = {
+static const unsigned xchain__contract_call_request__field_indices_by_name[] = {
   4,   /* field[4] = args */
   2,   /* field[2] = contract */
   0,   /* field[0] = header */
   3,   /* field[3] = method */
   1,   /* field[1] = module */
 };
-static const ProtobufCIntRange xchain__contract__sdk__contract_call_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__contract_call_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 5 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__contract_call_request__descriptor =
+const ProtobufCMessageDescriptor xchain__contract_call_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.ContractCallRequest",
+  "xchain.ContractCallRequest",
   "ContractCallRequest",
-  "Xchain__Contract__Sdk__ContractCallRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__ContractCallRequest),
+  "Xchain__ContractCallRequest",
+  "xchain",
+  sizeof(Xchain__ContractCallRequest),
   5,
-  xchain__contract__sdk__contract_call_request__field_descriptors,
-  xchain__contract__sdk__contract_call_request__field_indices_by_name,
-  1,  xchain__contract__sdk__contract_call_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__contract_call_request__init,
+  xchain__contract_call_request__field_descriptors,
+  xchain__contract_call_request__field_indices_by_name,
+  1,  xchain__contract_call_request__number_ranges,
+  (ProtobufCMessageInit) xchain__contract_call_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__contract_call_response__field_descriptors[1] =
+static const ProtobufCFieldDescriptor xchain__contract_call_response__field_descriptors[1] =
 {
   {
     "response",
@@ -2855,37 +2855,37 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__contract_call_respo
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__ContractCallResponse, response),
-    &xchain__contract__sdk__response__descriptor,
+    offsetof(Xchain__ContractCallResponse, response),
+    &xchain__response__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__contract_call_response__field_indices_by_name[] = {
+static const unsigned xchain__contract_call_response__field_indices_by_name[] = {
   0,   /* field[0] = response */
 };
-static const ProtobufCIntRange xchain__contract__sdk__contract_call_response__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__contract_call_response__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__contract_call_response__descriptor =
+const ProtobufCMessageDescriptor xchain__contract_call_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.ContractCallResponse",
+  "xchain.ContractCallResponse",
   "ContractCallResponse",
-  "Xchain__Contract__Sdk__ContractCallResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__ContractCallResponse),
+  "Xchain__ContractCallResponse",
+  "xchain",
+  sizeof(Xchain__ContractCallResponse),
   1,
-  xchain__contract__sdk__contract_call_response__field_descriptors,
-  xchain__contract__sdk__contract_call_response__field_indices_by_name,
-  1,  xchain__contract__sdk__contract_call_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__contract_call_response__init,
+  xchain__contract_call_response__field_descriptors,
+  xchain__contract_call_response__field_indices_by_name,
+  1,  xchain__contract_call_response__number_ranges,
+  (ProtobufCMessageInit) xchain__contract_call_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__cross_contract_query_request__field_descriptors[3] =
+static const ProtobufCFieldDescriptor xchain__cross_contract_query_request__field_descriptors[3] =
 {
   {
     "header",
@@ -2893,8 +2893,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__cross_contract_quer
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__CrossContractQueryRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__CrossContractQueryRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -2905,7 +2905,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__cross_contract_quer
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__CrossContractQueryRequest, uri),
+    offsetof(Xchain__CrossContractQueryRequest, uri),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -2916,41 +2916,41 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__cross_contract_quer
     5,
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_MESSAGE,
-    offsetof(Xchain__Contract__Sdk__CrossContractQueryRequest, n_args),
-    offsetof(Xchain__Contract__Sdk__CrossContractQueryRequest, args),
-    &xchain__contract__sdk__arg_pair__descriptor,
+    offsetof(Xchain__CrossContractQueryRequest, n_args),
+    offsetof(Xchain__CrossContractQueryRequest, args),
+    &xchain__arg_pair__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__cross_contract_query_request__field_indices_by_name[] = {
+static const unsigned xchain__cross_contract_query_request__field_indices_by_name[] = {
   2,   /* field[2] = args */
   0,   /* field[0] = header */
   1,   /* field[1] = uri */
 };
-static const ProtobufCIntRange xchain__contract__sdk__cross_contract_query_request__number_ranges[2 + 1] =
+static const ProtobufCIntRange xchain__cross_contract_query_request__number_ranges[2 + 1] =
 {
   { 1, 0 },
   { 5, 2 },
   { 0, 3 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__cross_contract_query_request__descriptor =
+const ProtobufCMessageDescriptor xchain__cross_contract_query_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.CrossContractQueryRequest",
+  "xchain.CrossContractQueryRequest",
   "CrossContractQueryRequest",
-  "Xchain__Contract__Sdk__CrossContractQueryRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__CrossContractQueryRequest),
+  "Xchain__CrossContractQueryRequest",
+  "xchain",
+  sizeof(Xchain__CrossContractQueryRequest),
   3,
-  xchain__contract__sdk__cross_contract_query_request__field_descriptors,
-  xchain__contract__sdk__cross_contract_query_request__field_indices_by_name,
-  2,  xchain__contract__sdk__cross_contract_query_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__cross_contract_query_request__init,
+  xchain__cross_contract_query_request__field_descriptors,
+  xchain__cross_contract_query_request__field_indices_by_name,
+  2,  xchain__cross_contract_query_request__number_ranges,
+  (ProtobufCMessageInit) xchain__cross_contract_query_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__cross_contract_query_response__field_descriptors[1] =
+static const ProtobufCFieldDescriptor xchain__cross_contract_query_response__field_descriptors[1] =
 {
   {
     "response",
@@ -2958,37 +2958,37 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__cross_contract_quer
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__CrossContractQueryResponse, response),
-    &xchain__contract__sdk__response__descriptor,
+    offsetof(Xchain__CrossContractQueryResponse, response),
+    &xchain__response__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__cross_contract_query_response__field_indices_by_name[] = {
+static const unsigned xchain__cross_contract_query_response__field_indices_by_name[] = {
   0,   /* field[0] = response */
 };
-static const ProtobufCIntRange xchain__contract__sdk__cross_contract_query_response__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__cross_contract_query_response__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__cross_contract_query_response__descriptor =
+const ProtobufCMessageDescriptor xchain__cross_contract_query_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.CrossContractQueryResponse",
+  "xchain.CrossContractQueryResponse",
   "CrossContractQueryResponse",
-  "Xchain__Contract__Sdk__CrossContractQueryResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__CrossContractQueryResponse),
+  "Xchain__CrossContractQueryResponse",
+  "xchain",
+  sizeof(Xchain__CrossContractQueryResponse),
   1,
-  xchain__contract__sdk__cross_contract_query_response__field_descriptors,
-  xchain__contract__sdk__cross_contract_query_response__field_indices_by_name,
-  1,  xchain__contract__sdk__cross_contract_query_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__cross_contract_query_response__init,
+  xchain__cross_contract_query_response__field_descriptors,
+  xchain__cross_contract_query_response__field_indices_by_name,
+  1,  xchain__cross_contract_query_response__number_ranges,
+  (ProtobufCMessageInit) xchain__cross_contract_query_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__response__field_descriptors[3] =
+static const ProtobufCFieldDescriptor xchain__response__field_descriptors[3] =
 {
   {
     "status",
@@ -2996,7 +2996,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__response__field_des
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_INT32,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Response, status),
+    offsetof(Xchain__Response, status),
     NULL,
     NULL,
     0,             /* flags */
@@ -3008,7 +3008,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__response__field_des
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Response, message),
+    offsetof(Xchain__Response, message),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3020,39 +3020,39 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__response__field_des
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Response, body),
+    offsetof(Xchain__Response, body),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__response__field_indices_by_name[] = {
+static const unsigned xchain__response__field_indices_by_name[] = {
   2,   /* field[2] = body */
   1,   /* field[1] = message */
   0,   /* field[0] = status */
 };
-static const ProtobufCIntRange xchain__contract__sdk__response__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__response__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 3 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__response__descriptor =
+const ProtobufCMessageDescriptor xchain__response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.Response",
+  "xchain.Response",
   "Response",
-  "Xchain__Contract__Sdk__Response",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__Response),
+  "Xchain__Response",
+  "xchain",
+  sizeof(Xchain__Response),
   3,
-  xchain__contract__sdk__response__field_descriptors,
-  xchain__contract__sdk__response__field_indices_by_name,
-  1,  xchain__contract__sdk__response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__response__init,
+  xchain__response__field_descriptors,
+  xchain__response__field_indices_by_name,
+  1,  xchain__response__number_ranges,
+  (ProtobufCMessageInit) xchain__response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__set_output_request__field_descriptors[2] =
+static const ProtobufCFieldDescriptor xchain__set_output_request__field_descriptors[2] =
 {
   {
     "header",
@@ -3060,8 +3060,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__set_output_request_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__SetOutputRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__SetOutputRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -3072,56 +3072,56 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__set_output_request_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__SetOutputRequest, response),
-    &xchain__contract__sdk__response__descriptor,
+    offsetof(Xchain__SetOutputRequest, response),
+    &xchain__response__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__set_output_request__field_indices_by_name[] = {
+static const unsigned xchain__set_output_request__field_indices_by_name[] = {
   0,   /* field[0] = header */
   1,   /* field[1] = response */
 };
-static const ProtobufCIntRange xchain__contract__sdk__set_output_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__set_output_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__set_output_request__descriptor =
+const ProtobufCMessageDescriptor xchain__set_output_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.SetOutputRequest",
+  "xchain.SetOutputRequest",
   "SetOutputRequest",
-  "Xchain__Contract__Sdk__SetOutputRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__SetOutputRequest),
+  "Xchain__SetOutputRequest",
+  "xchain",
+  sizeof(Xchain__SetOutputRequest),
   2,
-  xchain__contract__sdk__set_output_request__field_descriptors,
-  xchain__contract__sdk__set_output_request__field_indices_by_name,
-  1,  xchain__contract__sdk__set_output_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__set_output_request__init,
+  xchain__set_output_request__field_descriptors,
+  xchain__set_output_request__field_indices_by_name,
+  1,  xchain__set_output_request__number_ranges,
+  (ProtobufCMessageInit) xchain__set_output_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-#define xchain__contract__sdk__set_output_response__field_descriptors NULL
-#define xchain__contract__sdk__set_output_response__field_indices_by_name NULL
-#define xchain__contract__sdk__set_output_response__number_ranges NULL
-const ProtobufCMessageDescriptor xchain__contract__sdk__set_output_response__descriptor =
+#define xchain__set_output_response__field_descriptors NULL
+#define xchain__set_output_response__field_indices_by_name NULL
+#define xchain__set_output_response__number_ranges NULL
+const ProtobufCMessageDescriptor xchain__set_output_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.SetOutputResponse",
+  "xchain.SetOutputResponse",
   "SetOutputResponse",
-  "Xchain__Contract__Sdk__SetOutputResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__SetOutputResponse),
+  "Xchain__SetOutputResponse",
+  "xchain",
+  sizeof(Xchain__SetOutputResponse),
   0,
-  xchain__contract__sdk__set_output_response__field_descriptors,
-  xchain__contract__sdk__set_output_response__field_indices_by_name,
-  0,  xchain__contract__sdk__set_output_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__set_output_response__init,
+  xchain__set_output_response__field_descriptors,
+  xchain__set_output_response__field_indices_by_name,
+  0,  xchain__set_output_response__number_ranges,
+  (ProtobufCMessageInit) xchain__set_output_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__get_call_args_request__field_descriptors[1] =
+static const ProtobufCFieldDescriptor xchain__get_call_args_request__field_descriptors[1] =
 {
   {
     "header",
@@ -3129,37 +3129,37 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__get_call_args_reque
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__GetCallArgsRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__GetCallArgsRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__get_call_args_request__field_indices_by_name[] = {
+static const unsigned xchain__get_call_args_request__field_indices_by_name[] = {
   0,   /* field[0] = header */
 };
-static const ProtobufCIntRange xchain__contract__sdk__get_call_args_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__get_call_args_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__get_call_args_request__descriptor =
+const ProtobufCMessageDescriptor xchain__get_call_args_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.GetCallArgsRequest",
+  "xchain.GetCallArgsRequest",
   "GetCallArgsRequest",
-  "Xchain__Contract__Sdk__GetCallArgsRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__GetCallArgsRequest),
+  "Xchain__GetCallArgsRequest",
+  "xchain",
+  sizeof(Xchain__GetCallArgsRequest),
   1,
-  xchain__contract__sdk__get_call_args_request__field_descriptors,
-  xchain__contract__sdk__get_call_args_request__field_indices_by_name,
-  1,  xchain__contract__sdk__get_call_args_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__get_call_args_request__init,
+  xchain__get_call_args_request__field_descriptors,
+  xchain__get_call_args_request__field_indices_by_name,
+  1,  xchain__get_call_args_request__number_ranges,
+  (ProtobufCMessageInit) xchain__get_call_args_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__tx_input__field_descriptors[5] =
+static const ProtobufCFieldDescriptor xchain__tx_input__field_descriptors[5] =
 {
   {
     "ref_txid",
@@ -3167,7 +3167,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__tx_input__field_des
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TxInput, ref_txid),
+    offsetof(Xchain__TxInput, ref_txid),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3179,7 +3179,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__tx_input__field_des
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_INT32,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TxInput, ref_offset),
+    offsetof(Xchain__TxInput, ref_offset),
     NULL,
     NULL,
     0,             /* flags */
@@ -3191,7 +3191,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__tx_input__field_des
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TxInput, from_addr),
+    offsetof(Xchain__TxInput, from_addr),
     NULL,
     NULL,
     0,             /* flags */
@@ -3203,7 +3203,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__tx_input__field_des
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TxInput, amount),
+    offsetof(Xchain__TxInput, amount),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3215,42 +3215,42 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__tx_input__field_des
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_INT64,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TxInput, frozen_height),
+    offsetof(Xchain__TxInput, frozen_height),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__tx_input__field_indices_by_name[] = {
+static const unsigned xchain__tx_input__field_indices_by_name[] = {
   3,   /* field[3] = amount */
   2,   /* field[2] = from_addr */
   4,   /* field[4] = frozen_height */
   1,   /* field[1] = ref_offset */
   0,   /* field[0] = ref_txid */
 };
-static const ProtobufCIntRange xchain__contract__sdk__tx_input__number_ranges[2 + 1] =
+static const ProtobufCIntRange xchain__tx_input__number_ranges[2 + 1] =
 {
   { 1, 0 },
   { 5, 2 },
   { 0, 5 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__tx_input__descriptor =
+const ProtobufCMessageDescriptor xchain__tx_input__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.TxInput",
+  "xchain.TxInput",
   "TxInput",
-  "Xchain__Contract__Sdk__TxInput",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__TxInput),
+  "Xchain__TxInput",
+  "xchain",
+  sizeof(Xchain__TxInput),
   5,
-  xchain__contract__sdk__tx_input__field_descriptors,
-  xchain__contract__sdk__tx_input__field_indices_by_name,
-  2,  xchain__contract__sdk__tx_input__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__tx_input__init,
+  xchain__tx_input__field_descriptors,
+  xchain__tx_input__field_indices_by_name,
+  2,  xchain__tx_input__number_ranges,
+  (ProtobufCMessageInit) xchain__tx_input__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__tx_output__field_descriptors[3] =
+static const ProtobufCFieldDescriptor xchain__tx_output__field_descriptors[3] =
 {
   {
     "amount",
@@ -3258,7 +3258,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__tx_output__field_de
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TxOutput, amount),
+    offsetof(Xchain__TxOutput, amount),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3270,7 +3270,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__tx_output__field_de
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TxOutput, to_addr),
+    offsetof(Xchain__TxOutput, to_addr),
     NULL,
     NULL,
     0,             /* flags */
@@ -3282,40 +3282,40 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__tx_output__field_de
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_INT64,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__TxOutput, frozen_height),
+    offsetof(Xchain__TxOutput, frozen_height),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__tx_output__field_indices_by_name[] = {
+static const unsigned xchain__tx_output__field_indices_by_name[] = {
   0,   /* field[0] = amount */
   2,   /* field[2] = frozen_height */
   1,   /* field[1] = to_addr */
 };
-static const ProtobufCIntRange xchain__contract__sdk__tx_output__number_ranges[2 + 1] =
+static const ProtobufCIntRange xchain__tx_output__number_ranges[2 + 1] =
 {
   { 1, 0 },
   { 4, 2 },
   { 0, 3 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__tx_output__descriptor =
+const ProtobufCMessageDescriptor xchain__tx_output__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.TxOutput",
+  "xchain.TxOutput",
   "TxOutput",
-  "Xchain__Contract__Sdk__TxOutput",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__TxOutput),
+  "Xchain__TxOutput",
+  "xchain",
+  sizeof(Xchain__TxOutput),
   3,
-  xchain__contract__sdk__tx_output__field_descriptors,
-  xchain__contract__sdk__tx_output__field_indices_by_name,
-  2,  xchain__contract__sdk__tx_output__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__tx_output__init,
+  xchain__tx_output__field_descriptors,
+  xchain__tx_output__field_indices_by_name,
+  2,  xchain__tx_output__number_ranges,
+  (ProtobufCMessageInit) xchain__tx_output__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__transaction__field_descriptors[7] =
+static const ProtobufCFieldDescriptor xchain__transaction__field_descriptors[7] =
 {
   {
     "txid",
@@ -3323,7 +3323,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__transaction__field_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Transaction, txid),
+    offsetof(Xchain__Transaction, txid),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3335,7 +3335,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__transaction__field_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Transaction, blockid),
+    offsetof(Xchain__Transaction, blockid),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3346,9 +3346,9 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__transaction__field_
     3,
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_MESSAGE,
-    offsetof(Xchain__Contract__Sdk__Transaction, n_tx_inputs),
-    offsetof(Xchain__Contract__Sdk__Transaction, tx_inputs),
-    &xchain__contract__sdk__tx_input__descriptor,
+    offsetof(Xchain__Transaction, n_tx_inputs),
+    offsetof(Xchain__Transaction, tx_inputs),
+    &xchain__tx_input__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -3358,9 +3358,9 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__transaction__field_
     4,
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_MESSAGE,
-    offsetof(Xchain__Contract__Sdk__Transaction, n_tx_outputs),
-    offsetof(Xchain__Contract__Sdk__Transaction, tx_outputs),
-    &xchain__contract__sdk__tx_output__descriptor,
+    offsetof(Xchain__Transaction, n_tx_outputs),
+    offsetof(Xchain__Transaction, tx_outputs),
+    &xchain__tx_output__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -3371,7 +3371,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__transaction__field_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Transaction, desc),
+    offsetof(Xchain__Transaction, desc),
     NULL,
     NULL,
     0,             /* flags */
@@ -3383,7 +3383,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__transaction__field_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Transaction, initiator),
+    offsetof(Xchain__Transaction, initiator),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3394,15 +3394,15 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__transaction__field_
     27,
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_STRING,
-    offsetof(Xchain__Contract__Sdk__Transaction, n_auth_require),
-    offsetof(Xchain__Contract__Sdk__Transaction, auth_require),
+    offsetof(Xchain__Transaction, n_auth_require),
+    offsetof(Xchain__Transaction, auth_require),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__transaction__field_indices_by_name[] = {
+static const unsigned xchain__transaction__field_indices_by_name[] = {
   6,   /* field[6] = auth_require */
   1,   /* field[1] = blockid */
   4,   /* field[4] = desc */
@@ -3411,29 +3411,29 @@ static const unsigned xchain__contract__sdk__transaction__field_indices_by_name[
   3,   /* field[3] = tx_outputs */
   0,   /* field[0] = txid */
 };
-static const ProtobufCIntRange xchain__contract__sdk__transaction__number_ranges[3 + 1] =
+static const ProtobufCIntRange xchain__transaction__number_ranges[3 + 1] =
 {
   { 1, 0 },
   { 6, 4 },
   { 26, 5 },
   { 0, 7 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__transaction__descriptor =
+const ProtobufCMessageDescriptor xchain__transaction__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.Transaction",
+  "xchain.Transaction",
   "Transaction",
-  "Xchain__Contract__Sdk__Transaction",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__Transaction),
+  "Xchain__Transaction",
+  "xchain",
+  sizeof(Xchain__Transaction),
   7,
-  xchain__contract__sdk__transaction__field_descriptors,
-  xchain__contract__sdk__transaction__field_indices_by_name,
-  3,  xchain__contract__sdk__transaction__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__transaction__init,
+  xchain__transaction__field_descriptors,
+  xchain__transaction__field_indices_by_name,
+  3,  xchain__transaction__number_ranges,
+  (ProtobufCMessageInit) xchain__transaction__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__block__field_descriptors[10] =
+static const ProtobufCFieldDescriptor xchain__block__field_descriptors[11] =
 {
   {
     "blockid",
@@ -3441,7 +3441,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__block__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Block, blockid),
+    offsetof(Xchain__Block, blockid),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3453,7 +3453,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__block__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Block, pre_hash),
+    offsetof(Xchain__Block, pre_hash),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3465,7 +3465,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__block__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Block, proposer),
+    offsetof(Xchain__Block, proposer),
     NULL,
     NULL,
     0,             /* flags */
@@ -3477,7 +3477,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__block__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Block, sign),
+    offsetof(Xchain__Block, sign),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3489,7 +3489,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__block__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Block, pubkey),
+    offsetof(Xchain__Block, pubkey),
     NULL,
     NULL,
     0,             /* flags */
@@ -3501,7 +3501,19 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__block__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_INT64,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Block, height),
+    offsetof(Xchain__Block, height),
+    NULL,
+    NULL,
+    0,             /* flags */
+    0,NULL,NULL    /* reserved1,reserved2, etc */
+  },
+  {
+    "timestamp",
+    10,
+    PROTOBUF_C_LABEL_NONE,
+    PROTOBUF_C_TYPE_INT64,
+    0,   /* quantifier_offset */
+    offsetof(Xchain__Block, timestamp),
     NULL,
     NULL,
     0,             /* flags */
@@ -3512,8 +3524,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__block__field_descri
     11,
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_STRING,
-    offsetof(Xchain__Contract__Sdk__Block, n_txids),
-    offsetof(Xchain__Contract__Sdk__Block, txids),
+    offsetof(Xchain__Block, n_txids),
+    offsetof(Xchain__Block, txids),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3525,7 +3537,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__block__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_INT32,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Block, tx_count),
+    offsetof(Xchain__Block, tx_count),
     NULL,
     NULL,
     0,             /* flags */
@@ -3537,7 +3549,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__block__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BOOL,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Block, in_trunk),
+    offsetof(Xchain__Block, in_trunk),
     NULL,
     NULL,
     0,             /* flags */
@@ -3549,49 +3561,49 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__block__field_descri
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__Block, next_hash),
+    offsetof(Xchain__Block, next_hash),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__block__field_indices_by_name[] = {
+static const unsigned xchain__block__field_indices_by_name[] = {
   0,   /* field[0] = blockid */
   5,   /* field[5] = height */
-  8,   /* field[8] = in_trunk */
-  9,   /* field[9] = next_hash */
+  9,   /* field[9] = in_trunk */
+  10,   /* field[10] = next_hash */
   1,   /* field[1] = pre_hash */
   2,   /* field[2] = proposer */
   4,   /* field[4] = pubkey */
   3,   /* field[3] = sign */
-  7,   /* field[7] = tx_count */
-  6,   /* field[6] = txids */
+  6,   /* field[6] = timestamp */
+  8,   /* field[8] = tx_count */
+  7,   /* field[7] = txids */
 };
-static const ProtobufCIntRange xchain__contract__sdk__block__number_ranges[4 + 1] =
+static const ProtobufCIntRange xchain__block__number_ranges[3 + 1] =
 {
   { 3, 0 },
   { 9, 5 },
-  { 11, 6 },
-  { 14, 8 },
-  { 0, 10 }
+  { 14, 9 },
+  { 0, 11 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__block__descriptor =
+const ProtobufCMessageDescriptor xchain__block__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.Block",
+  "xchain.Block",
   "Block",
-  "Xchain__Contract__Sdk__Block",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__Block),
-  10,
-  xchain__contract__sdk__block__field_descriptors,
-  xchain__contract__sdk__block__field_indices_by_name,
-  4,  xchain__contract__sdk__block__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__block__init,
+  "Xchain__Block",
+  "xchain",
+  sizeof(Xchain__Block),
+  11,
+  xchain__block__field_descriptors,
+  xchain__block__field_indices_by_name,
+  3,  xchain__block__number_ranges,
+  (ProtobufCMessageInit) xchain__block__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__get_account_addresses_request__field_descriptors[2] =
+static const ProtobufCFieldDescriptor xchain__get_account_addresses_request__field_descriptors[2] =
 {
   {
     "header",
@@ -3599,8 +3611,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__get_account_address
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__GetAccountAddressesRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__GetAccountAddressesRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -3611,76 +3623,76 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__get_account_address
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__GetAccountAddressesRequest, account),
+    offsetof(Xchain__GetAccountAddressesRequest, account),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__get_account_addresses_request__field_indices_by_name[] = {
+static const unsigned xchain__get_account_addresses_request__field_indices_by_name[] = {
   1,   /* field[1] = account */
   0,   /* field[0] = header */
 };
-static const ProtobufCIntRange xchain__contract__sdk__get_account_addresses_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__get_account_addresses_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__get_account_addresses_request__descriptor =
+const ProtobufCMessageDescriptor xchain__get_account_addresses_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.GetAccountAddressesRequest",
+  "xchain.GetAccountAddressesRequest",
   "GetAccountAddressesRequest",
-  "Xchain__Contract__Sdk__GetAccountAddressesRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__GetAccountAddressesRequest),
+  "Xchain__GetAccountAddressesRequest",
+  "xchain",
+  sizeof(Xchain__GetAccountAddressesRequest),
   2,
-  xchain__contract__sdk__get_account_addresses_request__field_descriptors,
-  xchain__contract__sdk__get_account_addresses_request__field_indices_by_name,
-  1,  xchain__contract__sdk__get_account_addresses_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__get_account_addresses_request__init,
+  xchain__get_account_addresses_request__field_descriptors,
+  xchain__get_account_addresses_request__field_indices_by_name,
+  1,  xchain__get_account_addresses_request__number_ranges,
+  (ProtobufCMessageInit) xchain__get_account_addresses_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__get_account_addresses_response__field_descriptors[1] =
+static const ProtobufCFieldDescriptor xchain__get_account_addresses_response__field_descriptors[1] =
 {
   {
     "addresses",
     1,
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_STRING,
-    offsetof(Xchain__Contract__Sdk__GetAccountAddressesResponse, n_addresses),
-    offsetof(Xchain__Contract__Sdk__GetAccountAddressesResponse, addresses),
+    offsetof(Xchain__GetAccountAddressesResponse, n_addresses),
+    offsetof(Xchain__GetAccountAddressesResponse, addresses),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__get_account_addresses_response__field_indices_by_name[] = {
+static const unsigned xchain__get_account_addresses_response__field_indices_by_name[] = {
   0,   /* field[0] = addresses */
 };
-static const ProtobufCIntRange xchain__contract__sdk__get_account_addresses_response__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__get_account_addresses_response__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__get_account_addresses_response__descriptor =
+const ProtobufCMessageDescriptor xchain__get_account_addresses_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.GetAccountAddressesResponse",
+  "xchain.GetAccountAddressesResponse",
   "GetAccountAddressesResponse",
-  "Xchain__Contract__Sdk__GetAccountAddressesResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__GetAccountAddressesResponse),
+  "Xchain__GetAccountAddressesResponse",
+  "xchain",
+  sizeof(Xchain__GetAccountAddressesResponse),
   1,
-  xchain__contract__sdk__get_account_addresses_response__field_descriptors,
-  xchain__contract__sdk__get_account_addresses_response__field_indices_by_name,
-  1,  xchain__contract__sdk__get_account_addresses_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__get_account_addresses_response__init,
+  xchain__get_account_addresses_response__field_descriptors,
+  xchain__get_account_addresses_response__field_indices_by_name,
+  1,  xchain__get_account_addresses_response__number_ranges,
+  (ProtobufCMessageInit) xchain__get_account_addresses_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__post_log_request__field_descriptors[2] =
+static const ProtobufCFieldDescriptor xchain__post_log_request__field_descriptors[2] =
 {
   {
     "header",
@@ -3688,8 +3700,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__post_log_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__PostLogRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__PostLogRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -3700,38 +3712,38 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__post_log_request__f
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__PostLogRequest, entry),
+    offsetof(Xchain__PostLogRequest, entry),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__post_log_request__field_indices_by_name[] = {
+static const unsigned xchain__post_log_request__field_indices_by_name[] = {
   1,   /* field[1] = entry */
   0,   /* field[0] = header */
 };
-static const ProtobufCIntRange xchain__contract__sdk__post_log_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__post_log_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 2 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__post_log_request__descriptor =
+const ProtobufCMessageDescriptor xchain__post_log_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.PostLogRequest",
+  "xchain.PostLogRequest",
   "PostLogRequest",
-  "Xchain__Contract__Sdk__PostLogRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__PostLogRequest),
+  "Xchain__PostLogRequest",
+  "xchain",
+  sizeof(Xchain__PostLogRequest),
   2,
-  xchain__contract__sdk__post_log_request__field_descriptors,
-  xchain__contract__sdk__post_log_request__field_indices_by_name,
-  1,  xchain__contract__sdk__post_log_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__post_log_request__init,
+  xchain__post_log_request__field_descriptors,
+  xchain__post_log_request__field_indices_by_name,
+  1,  xchain__post_log_request__number_ranges,
+  (ProtobufCMessageInit) xchain__post_log_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__post_log_response__field_descriptors[1] =
+static const ProtobufCFieldDescriptor xchain__post_log_response__field_descriptors[1] =
 {
   {
     "entry",
@@ -3739,37 +3751,37 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__post_log_response__
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__PostLogResponse, entry),
+    offsetof(Xchain__PostLogResponse, entry),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__post_log_response__field_indices_by_name[] = {
+static const unsigned xchain__post_log_response__field_indices_by_name[] = {
   0,   /* field[0] = entry */
 };
-static const ProtobufCIntRange xchain__contract__sdk__post_log_response__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__post_log_response__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 1 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__post_log_response__descriptor =
+const ProtobufCMessageDescriptor xchain__post_log_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.PostLogResponse",
+  "xchain.PostLogResponse",
   "PostLogResponse",
-  "Xchain__Contract__Sdk__PostLogResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__PostLogResponse),
+  "Xchain__PostLogResponse",
+  "xchain",
+  sizeof(Xchain__PostLogResponse),
   1,
-  xchain__contract__sdk__post_log_response__field_descriptors,
-  xchain__contract__sdk__post_log_response__field_indices_by_name,
-  1,  xchain__contract__sdk__post_log_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__post_log_response__init,
+  xchain__post_log_response__field_descriptors,
+  xchain__post_log_response__field_indices_by_name,
+  1,  xchain__post_log_response__number_ranges,
+  (ProtobufCMessageInit) xchain__post_log_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-static const ProtobufCFieldDescriptor xchain__contract__sdk__emit_event_request__field_descriptors[3] =
+static const ProtobufCFieldDescriptor xchain__emit_event_request__field_descriptors[3] =
 {
   {
     "header",
@@ -3777,8 +3789,8 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__emit_event_request_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__EmitEventRequest, header),
-    &xchain__contract__sdk__syscall_header__descriptor,
+    offsetof(Xchain__EmitEventRequest, header),
+    &xchain__syscall_header__descriptor,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
@@ -3789,7 +3801,7 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__emit_event_request_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_STRING,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__EmitEventRequest, name),
+    offsetof(Xchain__EmitEventRequest, name),
     NULL,
     &protobuf_c_empty_string,
     0,             /* flags */
@@ -3801,53 +3813,53 @@ static const ProtobufCFieldDescriptor xchain__contract__sdk__emit_event_request_
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_BYTES,
     0,   /* quantifier_offset */
-    offsetof(Xchain__Contract__Sdk__EmitEventRequest, body),
+    offsetof(Xchain__EmitEventRequest, body),
     NULL,
     NULL,
     0,             /* flags */
     0,NULL,NULL    /* reserved1,reserved2, etc */
   },
 };
-static const unsigned xchain__contract__sdk__emit_event_request__field_indices_by_name[] = {
+static const unsigned xchain__emit_event_request__field_indices_by_name[] = {
   2,   /* field[2] = body */
   0,   /* field[0] = header */
   1,   /* field[1] = name */
 };
-static const ProtobufCIntRange xchain__contract__sdk__emit_event_request__number_ranges[1 + 1] =
+static const ProtobufCIntRange xchain__emit_event_request__number_ranges[1 + 1] =
 {
   { 1, 0 },
   { 0, 3 }
 };
-const ProtobufCMessageDescriptor xchain__contract__sdk__emit_event_request__descriptor =
+const ProtobufCMessageDescriptor xchain__emit_event_request__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.EmitEventRequest",
+  "xchain.EmitEventRequest",
   "EmitEventRequest",
-  "Xchain__Contract__Sdk__EmitEventRequest",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__EmitEventRequest),
+  "Xchain__EmitEventRequest",
+  "xchain",
+  sizeof(Xchain__EmitEventRequest),
   3,
-  xchain__contract__sdk__emit_event_request__field_descriptors,
-  xchain__contract__sdk__emit_event_request__field_indices_by_name,
-  1,  xchain__contract__sdk__emit_event_request__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__emit_event_request__init,
+  xchain__emit_event_request__field_descriptors,
+  xchain__emit_event_request__field_indices_by_name,
+  1,  xchain__emit_event_request__number_ranges,
+  (ProtobufCMessageInit) xchain__emit_event_request__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
-#define xchain__contract__sdk__emit_event_response__field_descriptors NULL
-#define xchain__contract__sdk__emit_event_response__field_indices_by_name NULL
-#define xchain__contract__sdk__emit_event_response__number_ranges NULL
-const ProtobufCMessageDescriptor xchain__contract__sdk__emit_event_response__descriptor =
+#define xchain__emit_event_response__field_descriptors NULL
+#define xchain__emit_event_response__field_indices_by_name NULL
+#define xchain__emit_event_response__number_ranges NULL
+const ProtobufCMessageDescriptor xchain__emit_event_response__descriptor =
 {
   PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC,
-  "xchain.contract.sdk.EmitEventResponse",
+  "xchain.EmitEventResponse",
   "EmitEventResponse",
-  "Xchain__Contract__Sdk__EmitEventResponse",
-  "xchain.contract.sdk",
-  sizeof(Xchain__Contract__Sdk__EmitEventResponse),
+  "Xchain__EmitEventResponse",
+  "xchain",
+  sizeof(Xchain__EmitEventResponse),
   0,
-  xchain__contract__sdk__emit_event_response__field_descriptors,
-  xchain__contract__sdk__emit_event_response__field_indices_by_name,
-  0,  xchain__contract__sdk__emit_event_response__number_ranges,
-  (ProtobufCMessageInit) xchain__contract__sdk__emit_event_response__init,
+  xchain__emit_event_response__field_descriptors,
+  xchain__emit_event_response__field_indices_by_name,
+  0,  xchain__emit_event_response__number_ranges,
+  (ProtobufCMessageInit) xchain__emit_event_response__init,
   NULL,NULL,NULL    /* reserved[123] */
 };
