@@ -41,5 +41,6 @@ COPY --from=builder /data/apps/xdev/bin/xdev bin/xdev
 COPY src src
 COPY xdev.toml xdev.toml
 
+# 1.39.0
 RUN mkdir lib && XEDV_ROOT=`pwd` bin/xdev build -o lib/libxchain.a --compiler host --using-precompiled-sdk=false -s "xchain" -s "xchain/trust_operators"
 RUN XEDV_ROOT=`pwd` bin/xdev build -o lib/libxchain.a --compiler host --using-precompiled-sdk=false -s "xchain" -s "xchain/trust_operators" -s "protobuf-c"
