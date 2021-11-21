@@ -13,7 +13,7 @@ namespace xchain {
 bool syscall(const std::string& method,
              const ::google::protobuf::MessageLite& request,
              ::google::protobuf::MessageLite* response);
-bool syscall1(std::string& method, Xchain__GetCallArgsRequest* request,
+bool syscall1(const std::string& method, Xchain__GetCallArgsRequest* request,
               ::google::protobuf::MessageLite* response);
 }  // namespace xchain
 #endif

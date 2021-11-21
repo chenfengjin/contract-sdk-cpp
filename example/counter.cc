@@ -4,12 +4,12 @@ struct Counter : public xchain::Contract {};
 
 DEFINE_METHOD(Counter, initialize) {
     xchain::Context* ctx = self.context();
-    const std::string& creator = ctx->arg("creator");
-    if (creator.empty()) {
-        ctx->error("missing creator");
-        return;
-    }
-    ctx->put_object("creator", creator);
+    // const std::string& creator = ctx->arg("creator");
+    // if (creator.empty()) {
+    // ctx->error("missing creator");
+    // return;
+    // }
+    // ctx->put_object("creator", creator);
     ctx->ok("initialize succeed");
 }
 
@@ -24,6 +24,7 @@ DEFINE_METHOD(Counter, increase) {
     char buf[32];
     snprintf(buf, 32, "%d", cnt + 1);
     ctx->put_object(key, buf);
+    ctx->emit_event("key", key);
 
     ctx->emit_event("increase", buf);
 

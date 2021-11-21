@@ -47,12 +47,12 @@ bool syscall1(const std::string& method, Xchain__GetCallArgsRequest* request,
     //   ProtobufCMessage* response) {
     // std::string req;
     std::string rep;
-    size_t size =
-        protobuf_c_message_get_packed_size((ProtobufCMessage*)request);
-    uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * size);
-    // for temp usage
+//    size_t size =
+//        protobuf_c_message_get_packed_size((*)request);
+    uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
+    xchain__get_call_args_request__pack(request, buffer);
     std::string req((char*)buffer);
-    protobuf_c_message_pack((ProtobufCMessage*)request, buffer);
+
     bool ok = syscall_raw(method, req, &rep);
     if (!ok) {
         return false;
