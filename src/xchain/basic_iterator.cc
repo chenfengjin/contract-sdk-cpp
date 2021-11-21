@@ -3,7 +3,7 @@
 #include "xchain/syscall.h"
 #include "xchain/contract.pb.h"
 
-namespace pb = xchain::contract::sdk;
+//namespace pb = xchain::contract::sdk;
 
 namespace xchain {
 
@@ -73,19 +73,20 @@ bool Iterator::end() {
 
 bool Iterator::range_query(const std::string& s, const std::string& e,
         const size_t limit, std::vector<std::pair<std::string, std::string>>* res) {
-    pb::IteratorRequest req;
-    pb::IteratorResponse resp;
-    req.set_limit(e);
-    req.set_start(s);
-    req.set_cap(limit);
-    bool ok = syscall("NewIterator", req, &resp);
-    if (!ok) {
-        return false;
-    }
-    for (auto item : resp.items()) {
-        res->emplace_back(item.key(), item.value());
-    }
     return true;
+//    pb::IteratorRequest req;
+//    pb::IteratorResponse resp;
+//    req.set_limit(e);
+//    req.set_start(s);
+//    req.set_cap(limit);
+//    bool ok = syscall("NewIterator", req, &resp);
+//    if (!ok) {
+//        return false;
+//    }
+//    for (auto item : resp.items()) {
+//        res->emplace_back(item.key(), item.value());
+//    }
+//    return true;
 }
 
 }

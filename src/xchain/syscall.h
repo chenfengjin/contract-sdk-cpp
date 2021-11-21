@@ -14,6 +14,6 @@ bool syscall(const std::string& method,
              const ::google::protobuf::MessageLite& request,
              ::google::protobuf::MessageLite* response);
 bool syscall1(const std::string& method, Xchain__GetCallArgsRequest* request,
-              ::google::protobuf::MessageLite* response);
+              uint8_t * response,size_t* size);
 }  // namespace xchain
 #endif

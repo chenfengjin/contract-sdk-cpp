@@ -4,7 +4,7 @@
 #include "xchain/contract.pb.h"
 #include "xchain/xchain.h"
 
-namespace pb = xchain::contract::sdk;
+//namespace pb = xchain::contract::sdk;
 
 namespace xchain {
 
@@ -43,7 +43,7 @@ public:
     virtual bool emit_event(const std::string& name, const std::string& body);
 
 private:
-    pb::CallArgs _call_args;
+//    pb::CallArgs _call_args;
     std::map<std::string, std::string> _args;
     Response _resp;
     Account _account;
