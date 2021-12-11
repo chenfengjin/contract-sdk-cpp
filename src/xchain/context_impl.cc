@@ -14,7 +14,7 @@ ContextImpl::~ContextImpl() {}
 
 const std::string& ContextImpl::method() {
     return "";
-//    return _call_args.method();
+    //    return _call_args.method();
 }
 
 bool ContextImpl::init() {
@@ -22,22 +22,23 @@ bool ContextImpl::init() {
     Xchain__GetCallArgsRequest req;
     xchain__get_call_args_request__init(&req);
     std::string method = "GetCallArgs";
-    uint8_t * resp;
+    uint8_t* resp;
     size_t len;
-    bool ok = syscall1(method, &req, resp,&len);
+    bool ok = syscall1(method, &req, resp, &len);
     if (!ok) {
         return false;
     }
-    Xchain__CallArgs*  args;
-//     确认下init 是不是会分配内存
+    Xchain__CallArgs* args;
+    //     确认下init 是不是会分配内存
     xchain__call_args__init(args);
-    args =  xchain__call_args__unpack(NULL,len,resp);
-    for(int i = 0;i<args->n_args;i++){
-//        TODO 这里可能没有终结符
-        _args.insert(std::make_pair(args->args[i]->key, (char*)args->args[i]->value.data));
+    args = xchain__call_args__unpack(NULL, len, resp);
+    for (int i = 0; i < args->n_args; i++) {
+        //        TODO 这里可能没有终结符
+        _args.insert(std::make_pair(args->args[i]->key,
+                                    (char*)args->args[i]->value.data));
     }
     _resp.status = 200;
-//    _account = Account(_call_args.initiator());
+    //    _account = Account(_call_args.initiator());
 
     return true;
 }
@@ -55,88 +56,95 @@ const std::string& ContextImpl::arg(const std::string& name) const {
 }
 
 const std::string& ContextImpl::initiator() const {
-//    return "";
-//    return _call_args.initiator();
+    //    return "";
+    //    return _call_args.initiator();
 }
 
 int ContextImpl::auth_require_size() const {
     return 0;
-//    return _call_args.auth_require_size();
+    //    return _call_args.auth_require_size();
 }
 
 const std::string& ContextImpl::auth_require(int idx) const {
     return "";
-//    return _call_args.auth_require(idx);
+    //    return _call_args.auth_require(idx);
 }
 
 bool ContextImpl::get_object(const std::string& key, std::string* value) {
+    Xchain__GetRequest req;
+    xchain__get_request__init(&req);
+    // req.header
+    // req.key =
+    uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
+    xchain__get_request__pack(&req, buffer);
+
+    std::string reqs((char*)buffer);
+    std::string method;
+    uint8_t* resp;
+    size_t len;
+
+    bool ok = syscall_raw1(method, reqs, resp, &len);
+    if (!ok) {
+        return false;
+    };
     return true;
-//    pb::GetRequest req;
-//    pb::GetResponse rep;
-//    req.set_key(key);
-//    bool ok = syscall("GetObject", req, &rep);
-//    if (!ok) {
-//        return false;
-//    }
-//    *value = rep.value();
-//    return true;
 }
 
 bool ContextImpl::put_object(const std::string& key, const std::string& value) {
     return true;
-//    pb::PutRequest req;
-//    pb::PutResponse rep;
-//    req.set_key(key);
-//    req.set_value(value);
-//    bool ok = syscall("PutObject", req, &rep);
-//    if (!ok) {
-//        return false;
-//    }
-//    return true;
+    //    pb::PutRequest req;
+    //    pb::PutResponse rep;
+    //    req.set_key(key);
+    //    req.set_value(value);
+    //    bool ok = syscall("PutObject", req, &rep);
+    //    if (!ok) {
+    //        return false;
+    //    }
+    //    return true;
 }
 
 bool ContextImpl::delete_object(const std::string& key) {
     return true;
-//    pb::DeleteRequest req;
-//    pb::DeleteResponse rep;
-//    req.set_key(key);
-//    bool ok = syscall("DeleteObject", req, &rep);
-//    if (!ok) {
-//        return false;
-//    }
-//    return true;
+    //    pb::DeleteRequest req;
+    //    pb::DeleteResponse rep;
+    //    req.set_key(key);
+    //    bool ok = syscall("DeleteObject", req, &rep);
+    //    if (!ok) {
+    //        return false;
+    //    }
+    //    return true;
 }
 
 bool ContextImpl::query_tx(const std::string& txid, Transaction* tx) {
     return true;
-//    pb::QueryTxRequest req;
-//    pb::QueryTxResponse rep;
-//
-//    req.set_txid(txid);
-//    bool ok = syscall("QueryTx", req, &rep);
-//    if (!ok) {
-//        return false;
-//    }
-//
-//    tx->init(rep.tx());
-//
-//    return true;
+    //    pb::QueryTxRequest req;
+    //    pb::QueryTxResponse rep;
+    //
+    //    req.set_txid(txid);
+    //    bool ok = syscall("QueryTx", req, &rep);
+    //    if (!ok) {
+    //        return false;
+    //    }
+    //
+    //    tx->init(rep.tx());
+    //
+    //    return true;
 }
 
 bool ContextImpl::query_block(const std::string& blockid, Block* block) {
     return true;
-//    pb::QueryBlockRequest req;
-//    pb::QueryBlockResponse rep;
-//
-//    req.set_blockid(blockid);
-//    bool ok = syscall("QueryBlock", req, &rep);
-//    if (!ok) {
-//        return false;
-//    }
-//
-//    block->init(rep.block());
+    //    pb::QueryBlockRequest req;
+    //    pb::QueryBlockResponse rep;
+    //
+    //    req.set_blockid(blockid);
+    //    bool ok = syscall("QueryBlock", req, &rep);
+    //    if (!ok) {
+    //        return false;
+    //    }
+    //
+    //    block->init(rep.block());
 
-//    return true;
+    //    return true;
 }
 
 void ContextImpl::ok(const std::string& body) {
@@ -163,7 +171,7 @@ Account& ContextImpl::sender() { return _account; }
 
 const std::string& ContextImpl::transfer_amount() const {
     return "0";
-//    return _call_args.transfer_amount();
+    //    return _call_args.transfer_amount();
 }
 
 bool ContextImpl::call(const std::string& module, const std::string& contract,
@@ -171,45 +179,45 @@ bool ContextImpl::call(const std::string& module, const std::string& contract,
                        const std::map<std::string, std::string>& args,
                        Response* xresponse) {
     return true;
-//    pb::ContractCallRequest request;
-//    pb::ContractCallResponse response;
-//    request.set_module(module);
-//    request.set_contract(contract);
-//    request.set_method(method);
-//    for (auto it = args.begin(); it != args.end(); it++) {
-//        auto arg = request.add_args();
-//        arg->set_key(it->first);
-//        arg->set_value(it->second);
-//    }
-//    bool ok = syscall("ContractCall", request, &response);
-//    if (!ok) {
-//        return false;
-//    }
-//    xresponse->status = response.response().status();
-//    xresponse->message = response.response().message();
-//    xresponse->body = response.response().body();
-//    return true;
+    //    pb::ContractCallRequest request;
+    //    pb::ContractCallResponse response;
+    //    request.set_module(module);
+    //    request.set_contract(contract);
+    //    request.set_method(method);
+    //    for (auto it = args.begin(); it != args.end(); it++) {
+    //        auto arg = request.add_args();
+    //        arg->set_key(it->first);
+    //        arg->set_value(it->second);
+    //    }
+    //    bool ok = syscall("ContractCall", request, &response);
+    //    if (!ok) {
+    //        return false;
+    //    }
+    //    xresponse->status = response.response().status();
+    //    xresponse->message = response.response().message();
+    //    xresponse->body = response.response().body();
+    //    return true;
 }
 
 bool ContextImpl::cross_query(const std::string& uri,
                               const std::map<std::string, std::string>& args,
                               Response* xresponse) {
     return true;
-//    pb::CrossContractQueryRequest request;
-//    pb::CrossContractQueryResponse response;
-//    request.set_uri(uri);
-//    for (auto it = args.begin(); it != args.end(); it++) {
-//        auto arg = request.add_args();
-//        arg->set_key(it->first);
-//        arg->set_value(it->second);
-//    }
-//    bool ok = syscall("CrossContractQuery", request, &response);
-//    if (!ok) {
-//        return false;
-//    }
-//    xresponse->status = response.response().status();
-//    xresponse->message = response.response().message();
-//    xresponse->body = response.response().body();
+    //    pb::CrossContractQueryRequest request;
+    //    pb::CrossContractQueryResponse response;
+    //    request.set_uri(uri);
+    //    for (auto it = args.begin(); it != args.end(); it++) {
+    //        auto arg = request.add_args();
+    //        arg->set_key(it->first);
+    //        arg->set_value(it->second);
+    //    }
+    //    bool ok = syscall("CrossContractQuery", request, &response);
+    //    if (!ok) {
+    //        return false;
+    //    }
+    //    xresponse->status = response.response().status();
+    //    xresponse->message = response.response().message();
+    //    xresponse->body = response.response().body();
     return true;
 }
 
@@ -223,15 +231,15 @@ void ContextImpl::logf(const char* fmt, ...) {
 
 bool ContextImpl::emit_event(const std::string& name, const std::string& body) {
     return true;
-//    pb::EmitEventRequest request;
-//    pb::EmitEventResponse response;
-//    request.set_name(name);
-//    request.set_body(body);
-//    bool ok = syscall("EmitEvent", request, &response);
-//    if (!ok) {
-//        return false;
-//    }
-//    return true;
+    //    pb::EmitEventRequest request;
+    //    pb::EmitEventResponse response;
+    //    request.set_name(name);
+    //    request.set_body(body);
+    //    bool ok = syscall("EmitEvent", request, &response);
+    //    if (!ok) {
+    //        return false;
+    //    }
+    //    return true;
 }
 
 }  // namespace xchain

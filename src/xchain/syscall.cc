@@ -45,7 +45,7 @@ static bool syscall_raw(const std::string& method, const std::string& request,
 
 // response should be free by caller
 static bool syscall_raw1(const std::string& method, const std::string& request,
-                        uint8_t * response,size_t* len) {
+                         uint8_t* response, size_t* len) {
     char buf[1024];
     uint32_t buf_len = sizeof(buf);
 
@@ -61,29 +61,28 @@ static bool syscall_raw1(const std::string& method, const std::string& request,
         return true;
     }
 
-    response = (uint8_t *)malloc(response_len+1);
+    response = (uint8_t*)malloc(response_len + 1);
     // buf can hold the response
     if (response_len <= buf_len) {
-        memmove(response,buf,response_len);
+        memmove(response, buf, response_len);
         return success == 1;
     }
 
     // slow path
-//     TODO why add one
-//    response->resize(response_len + 1, 0);
-//     TODO 确认为什么用char*
+    //     TODO why add one
+    //    response->resize(response_len + 1, 0);
+    //     TODO 确认为什么用char*
     success = fetch_response((char*)response, response_len);
     return success == 1;
 }
 
-
 bool syscall1(const std::string& method, Xchain__GetCallArgsRequest* request,
-              uint8_t * response,size_t* len) {
+              uint8_t* response, size_t* len) {
     uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
     xchain__get_call_args_request__pack(request, buffer);
     std::string req((char*)buffer);
 
-    bool ok = syscall_raw1(method, req, response,len);
+    bool ok = syscall_raw1(method, req, response, len);
     if (!ok) {
         return false;
     };
