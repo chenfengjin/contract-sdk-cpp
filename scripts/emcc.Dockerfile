@@ -31,7 +31,6 @@ RUN curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v3.7.
 RUN tar xvf protobuf-cpp-3.7.1.tar.gz
 
 WORKDIR /data/apps/emsdk/protobuf-3.7.1/cmake/
-COPY CMakeLists.txt_pb CMakeLists.txt
 RUN mkdir build && cd build &&  emcmake cmake  -D protobuf_BUILD_PROTOC_BINARIES=0 -D protobuf_BUILD_TESTS=0 -D protobuf_BUILD_EXAMPLES=0 ..  && emcmake make  -j 8  
 RUN cd build&& emcmake make install 
 
@@ -44,3 +43,6 @@ COPY xdev.toml xdev.toml
 # 1.39.0
 RUN mkdir lib && XEDV_ROOT=`pwd` bin/xdev build -o lib/libxchain.a --compiler host --using-precompiled-sdk=false -s "xchain" -s "xchain/trust_operators"
 RUN XEDV_ROOT=`pwd` bin/xdev build -o lib/libxchain.a --compiler host --using-precompiled-sdk=false -s "xchain" -s "xchain/trust_operators" -s "protobuf-c"
+
+COPY example example 
+RUN XEDV_ROOT=`pwd` bin/xdev build -o counter.wasm example/counter.cc --compiler host 

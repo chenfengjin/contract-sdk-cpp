@@ -44,8 +44,8 @@ static bool syscall_raw(const std::string& method, const std::string& request,
 }
 
 // response should be free by caller
-static bool syscall_raw1(const std::string& method, const std::string& request,
-                         uint8_t* response, size_t* len) {
+bool syscall_raw1(const std::string& method, const std::string& request,
+                  uint8_t* response, size_t* len) {
     char buf[1024];
     uint32_t buf_len = sizeof(buf);
 

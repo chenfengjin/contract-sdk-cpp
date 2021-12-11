@@ -73,17 +73,14 @@ const std::string& ContextImpl::auth_require(int idx) const {
 bool ContextImpl::get_object(const std::string& key, std::string* value) {
     Xchain__GetRequest req;
     xchain__get_request__init(&req);
-    // req.header
-    // req.key =
     uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
     xchain__get_request__pack(&req, buffer);
 
     std::string reqs((char*)buffer);
-    std::string method;
     uint8_t* resp;
     size_t len;
 
-    bool ok = syscall_raw1(method, reqs, resp, &len);
+    bool ok = syscall_raw1("GetObject", reqs, resp, &len);
     if (!ok) {
         return false;
     };
@@ -91,60 +88,72 @@ bool ContextImpl::get_object(const std::string& key, std::string* value) {
 }
 
 bool ContextImpl::put_object(const std::string& key, const std::string& value) {
+    Xchain__PutRequest req;
+    xchain__put_request__init(&req);
+    uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
+    xchain__put_request__pack(&req, buffer);
+
+    std::string reqs((char*)buffer);
+    uint8_t* resp;
+    size_t len;
+
+    bool ok = syscall_raw1("PutObject", reqs, resp, &len);
+    if (!ok) {
+        return false;
+    };
     return true;
-    //    pb::PutRequest req;
-    //    pb::PutResponse rep;
-    //    req.set_key(key);
-    //    req.set_value(value);
-    //    bool ok = syscall("PutObject", req, &rep);
-    //    if (!ok) {
-    //        return false;
-    //    }
-    //    return true;
 }
 
 bool ContextImpl::delete_object(const std::string& key) {
+    Xchain__DeleteRequest req;
+    xchain__delete_request__init(&req);
+    uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
+    xchain__delete_request__pack(&req, buffer);
+
+    std::string reqs((char*)buffer);
+    uint8_t* resp;
+    size_t len;
+
+    bool ok = syscall_raw1("DeleteObject", reqs, resp, &len);
+    if (!ok) {
+        return false;
+    };
     return true;
-    //    pb::DeleteRequest req;
-    //    pb::DeleteResponse rep;
-    //    req.set_key(key);
-    //    bool ok = syscall("DeleteObject", req, &rep);
-    //    if (!ok) {
-    //        return false;
-    //    }
-    //    return true;
 }
 
 bool ContextImpl::query_tx(const std::string& txid, Transaction* tx) {
+    Xchain__QueryTxRequest req;
+    xchain__query_tx_request__init(&req);
+    uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
+    xchain__query_tx_request__pack(&req, buffer);
+
+    std::string reqs((char*)buffer);
+    uint8_t* resp;
+    size_t len;
+
+    bool ok = syscall_raw1("QueryTx", reqs, resp, &len);
+    if (!ok) {
+        return false;
+    };
     return true;
-    //    pb::QueryTxRequest req;
-    //    pb::QueryTxResponse rep;
-    //
-    //    req.set_txid(txid);
-    //    bool ok = syscall("QueryTx", req, &rep);
-    //    if (!ok) {
-    //        return false;
-    //    }
-    //
-    //    tx->init(rep.tx());
-    //
-    //    return true;
 }
 
 bool ContextImpl::query_block(const std::string& blockid, Block* block) {
-    return true;
-    //    pb::QueryBlockRequest req;
-    //    pb::QueryBlockResponse rep;
-    //
-    //    req.set_blockid(blockid);
-    //    bool ok = syscall("QueryBlock", req, &rep);
-    //    if (!ok) {
-    //        return false;
-    //    }
-    //
-    //    block->init(rep.block());
+    Xchain__QueryBlockRequest req;
+    xchain__query_block_request__init(&req);
+    uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
+    xchain__query_block_request__pack(&req, buffer);
 
-    //    return true;
+    std::string reqs((char*)buffer);
+    std::string method;
+    uint8_t* resp;
+    size_t len;
+
+    bool ok = syscall_raw1("QueryBlock", reqs, resp, &len);
+    if (!ok) {
+        return false;
+    };
+    return true;
 }
 
 void ContextImpl::ok(const std::string& body) {
@@ -178,46 +187,40 @@ bool ContextImpl::call(const std::string& module, const std::string& contract,
                        const std::string& method,
                        const std::map<std::string, std::string>& args,
                        Response* xresponse) {
+    Xchain__ContractCallRequest req;
+    xchain__contract_call_request__init(&req);
+    uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
+    xchain__contract_call_request__pack(&req, buffer);
+
+    std::string reqs((char*)buffer);
+    uint8_t* resp;
+    size_t len;
+
+    bool ok = syscall_raw1("ContractCall", reqs, resp, &len);
+    if (!ok) {
+        return false;
+    };
     return true;
-    //    pb::ContractCallRequest request;
-    //    pb::ContractCallResponse response;
-    //    request.set_module(module);
-    //    request.set_contract(contract);
-    //    request.set_method(method);
-    //    for (auto it = args.begin(); it != args.end(); it++) {
-    //        auto arg = request.add_args();
-    //        arg->set_key(it->first);
-    //        arg->set_value(it->second);
-    //    }
-    //    bool ok = syscall("ContractCall", request, &response);
-    //    if (!ok) {
-    //        return false;
-    //    }
-    //    xresponse->status = response.response().status();
-    //    xresponse->message = response.response().message();
-    //    xresponse->body = response.response().body();
-    //    return true;
 }
 
 bool ContextImpl::cross_query(const std::string& uri,
                               const std::map<std::string, std::string>& args,
                               Response* xresponse) {
+    Xchain__CrossContractQueryRequest req;
+    xchain__cross_contract_query_request__init(&req);
+    uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
+    xchain__cross_contract_query_request__pack(&req, buffer);
+
+    std::string reqs((char*)buffer);
+    std::string method;
+    uint8_t* resp;
+    size_t len;
+
+    bool ok = syscall_raw1(method, reqs, resp, &len);
+    if (!ok) {
+        return false;
+    };
     return true;
-    //    pb::CrossContractQueryRequest request;
-    //    pb::CrossContractQueryResponse response;
-    //    request.set_uri(uri);
-    //    for (auto it = args.begin(); it != args.end(); it++) {
-    //        auto arg = request.add_args();
-    //        arg->set_key(it->first);
-    //        arg->set_value(it->second);
-    //    }
-    //    bool ok = syscall("CrossContractQuery", request, &response);
-    //    if (!ok) {
-    //        return false;
-    //    }
-    //    xresponse->status = response.response().status();
-    //    xresponse->message = response.response().message();
-    //    xresponse->body = response.response().body();
     return true;
 }
 
@@ -230,16 +233,21 @@ void ContextImpl::logf(const char* fmt, ...) {
 }
 
 bool ContextImpl::emit_event(const std::string& name, const std::string& body) {
+    Xchain__EmitEventRequest req;
+    xchain__emit_event_request__init(&req);
+    uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
+    xchain__emit_event_request__pack(&req, buffer);
+
+    std::string reqs((char*)buffer);
+    std::string method;
+    uint8_t* resp;
+    size_t len;
+
+    bool ok = syscall_raw1(method, reqs, resp, &len);
+    if (!ok) {
+        return false;
+    };
     return true;
-    //    pb::EmitEventRequest request;
-    //    pb::EmitEventResponse response;
-    //    request.set_name(name);
-    //    request.set_body(body);
-    //    bool ok = syscall("EmitEvent", request, &response);
-    //    if (!ok) {
-    //        return false;
-    //    }
-    //    return true;
 }
 
 }  // namespace xchain
