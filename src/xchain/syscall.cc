@@ -51,7 +51,6 @@ bool syscall_raw1(const std::string& method, const std::string& request,
 
     uint32_t response_len = 0;
     uint32_t success = 0;
-
     response_len =
         call_method_v2(method.data(), uint32_t(method.size()), request.data(),
                        uint32_t(request.size()), &buf[0], buf_len, &success);

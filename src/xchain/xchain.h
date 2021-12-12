@@ -5,6 +5,7 @@
 #include <memory>
 #include <string>
 #include <vector>
+
 #include "xchain/account.h"
 #include "xchain/basic_iterator.h"
 #include "xchain/block.h"
@@ -37,19 +38,20 @@ public:
     virtual void ok(const std::string& body) = 0;
     virtual void error(const std::string& body) = 0;
     virtual Response* mutable_response() = 0;
-    virtual std::unique_ptr<Iterator> new_iterator(
-        const std::string& start, const std::string& limit) = 0;
+    // virtual std::unique_ptr<Iterator> new_iterator(
+    // const std::string& start, const std::string& limit) = 0;
     virtual Account& sender() = 0;
     virtual const std::string& transfer_amount() const = 0;
     virtual bool call(const std::string& module, const std::string& contract,
                       const std::string& method,
                       const std::map<std::string, std::string>& args,
                       Response* response) = 0;
-    virtual bool cross_query(const std::string& uri, 
-                        const std::map<std::string, std::string>& args,
-                        Response* response) = 0;                  
+    virtual bool cross_query(const std::string& uri,
+                             const std::map<std::string, std::string>& args,
+                             Response* response) = 0;
     virtual void logf(const char* fmt, ...) = 0;
-    virtual bool emit_event(const std::string& name, const std::string& body) = 0;
+    virtual bool emit_event(const std::string& name,
+                            const std::string& body) = 0;
 };
 
 class Contract {

@@ -84,19 +84,26 @@ bool ContextImpl::get_object(const std::string& key, std::string* value) {
     if (!ok) {
         return false;
     };
+    Xchain__GetResponse response;
+    xchain__get_response__unpack(NULL, len, resp);
+    value = new std::string((char*)response.value.data);
     return true;
 }
 
 bool ContextImpl::put_object(const std::string& key, const std::string& value) {
     Xchain__PutRequest req;
     xchain__put_request__init(&req);
+    req.key.data = (uint8_t*)key.c_str();
+    req.key.len = key.size();
+    req.value.data = (uint8_t*)value.c_str();
+    req.value.len = value.size();
+
     uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
     xchain__put_request__pack(&req, buffer);
 
     std::string reqs((char*)buffer);
     uint8_t* resp;
     size_t len;
-
     bool ok = syscall_raw1("PutObject", reqs, resp, &len);
     if (!ok) {
         return false;
@@ -170,11 +177,12 @@ Response* ContextImpl::mutable_response() { return &_resp; }
 
 const Response& ContextImpl::get_response() { return _resp; }
 
-std::unique_ptr<Iterator> ContextImpl::new_iterator(const std::string& start,
-                                                    const std::string& limit) {
-    return std::unique_ptr<Iterator>(
-        new Iterator(start, limit, ITERATOR_BATCH_SIZE));
-}
+// std::unique_ptr<Iterator> ContextImpl::new_iterator(const std::string& start,
+//                                                     const std::string& limit)
+//                                                     {
+//     return std::unique_ptr<Iterator>(
+//         new Iterator(start, limit, ITERATOR_BATCH_SIZE));
+// }
 
 Account& ContextImpl::sender() { return _account; }
 
