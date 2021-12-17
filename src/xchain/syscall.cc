@@ -12,7 +12,7 @@ extern "C" uint32_t call_method_v2(const char* method, uint32_t method_len,
                                    const char* request, uint32_t request_len,
                                    char* response, uint32_t response_len,
                                    uint32_t* success);
-
+extern "C" uint32_t log_print(const char* entry, uint32_t entry_len);
 namespace xchain {
 
 static bool syscall_raw(const std::string& method, const std::string& request,
@@ -26,10 +26,15 @@ static bool syscall_raw(const std::string& method, const std::string& request,
     response_len =
         call_method_v2(method.data(), uint32_t(method.size()), request.data(),
                        uint32_t(request.size()), &buf[0], buf_len, &success);
+    if (method == "GetObject") {
+        call_method_v2(buf, response_len, request.data(),
+                       uint32_t(request.size()), &buf[0], buf_len, &success);
+    }
     // method has no return and no error
     if (response_len <= 0) {
         return true;
     }
+    log_print(&buf[0], buf_len);
 
     // buf can hold the response
     if (response_len <= buf_len) {

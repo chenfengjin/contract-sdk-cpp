@@ -21,10 +21,9 @@ bool ContextImpl::init() {
     // pb::GetCallArgsRequest req;
     Xchain__GetCallArgsRequest req;
     xchain__get_call_args_request__init(&req);
-    std::string method = "GetCallArgs";
     uint8_t* resp;
     size_t len;
-    bool ok = syscall1(method, &req, resp, &len);
+    bool ok = syscall1("GetCallArgs", &req, resp, &len);
     if (!ok) {
         return false;
     }
@@ -74,6 +73,10 @@ bool ContextImpl::get_object(const std::string& key, std::string* value) {
     Xchain__GetRequest req;
     xchain__get_request__init(&req);
     uint8_t* buffer = (uint8_t*)malloc(sizeof(uint8_t) * 1024);
+
+    req.key.data = (uint8_t*)key.c_str();
+    req.key.len = key.size();
+
     xchain__get_request__pack(&req, buffer);
 
     std::string reqs((char*)buffer);
@@ -84,9 +87,14 @@ bool ContextImpl::get_object(const std::string& key, std::string* value) {
     if (!ok) {
         return false;
     };
-    Xchain__GetResponse response;
-    xchain__get_response__unpack(NULL, len, resp);
-    value = new std::string((char*)response.value.data);
+    Xchain__GetResponse* response =
+        xchain__get_response__unpack(NULL, len, resp);
+    // TODO 确认下这个地方如何设置
+    *value = "hello";
+
+    std::string a = std::string((char*)resp);
+    syscall_raw1(a, reqs, resp, &len);
+
     return true;
 }
 

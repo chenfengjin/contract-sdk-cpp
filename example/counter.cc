@@ -33,7 +33,8 @@ DEFINE_METHOD(Counter, increase) {
 
 DEFINE_METHOD(Counter, get) {
     xchain::Context* ctx = self.context();
-    const std::string& key = ctx->arg("key");
+    // const std::string& key = ctx->arg("key");
+    const std::string& key = "key";
     std::string value;
     if (ctx->get_object(key, &value)) {
         ctx->ok(value);
