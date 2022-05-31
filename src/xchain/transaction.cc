@@ -2,8 +2,10 @@
 #include <memory>
 #include "xchain/contract.pb.h"
 
-extern "C" int xvm_make_tx(const char* txptr, int txlen, char** outpptr,
-                           int* outlen);
+int xvm_make_tx(const char* txptr, int txlen, char** outpptr,
+                           int* outlen){
+                               return 0;
+                           }
 
 namespace pb = xchain::contract::sdk;
 

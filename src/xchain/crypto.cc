@@ -1,15 +1,26 @@
 #include "xchain/crypto.h"
 #include <string>
 
-extern "C" void xvm_hash(const char* name, const char* inputptr, int inputlen,
-                         char* outputptr, int outputlen);
-extern "C" void xvm_encode(const char* name, const char* inputptr, int inputlen,
-                           char** outputpptr, int* outlen);
-extern "C" int xvm_decode(const char* name, const char* inputptr, int inputlen,
-                          char** outputpptr, int* outlen);
-extern "C" int xvm_ecverify(const char* pubptr, int publen, const char* sigptr,
-                            int siglen, const char* hashptr, int hashlen);
-extern "C" char* xvm_addr_from_pubkey(const char* pubptr, int publen);
+ void xvm_hash(const char* name, const char* inputptr, int inputlen,
+                         char* outputptr, int outputlen){
+                             return;
+                         }
+ void xvm_encode(const char* name, const char* inputptr, int inputlen,
+                           char** outputpptr, int* outlen){
+                               return;
+                           }
+int xvm_decode(const char* name, const char* inputptr, int inputlen,
+                          char** outputpptr, int* outlen){
+                              return 0;
+                          }
+int xvm_ecverify(const char* pubptr, int publen, const char* sigptr,
+                            int siglen, const char* hashptr, int hashlen){
+                                return 0;
+                            }
+char* xvm_addr_from_pubkey(const char* pubptr, int publen){
+    // TODO 
+    return 0;
+}
 
 namespace xchain {
 namespace crypto {

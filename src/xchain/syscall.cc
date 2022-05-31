@@ -1,12 +1,18 @@
 #include "xchain/syscall.h"
 
-extern "C" uint32_t call_method(const char* method, uint32_t method_len,
-                                const char* request, uint32_t request_len);
-extern "C" uint32_t fetch_response(char* response, uint32_t response_len);
-extern "C" uint32_t call_method_v2(const char* method, uint32_t method_len,
+ uint32_t call_method(const char* method, uint32_t method_len,
+                                const char* request, uint32_t request_len){
+                                    return 0;
+                                }
+uint32_t fetch_response(char* response, uint32_t response_len){
+    return 0;
+}
+ uint32_t call_method_v2(const char* method, uint32_t method_len,
                                    const char* request, uint32_t request_len,
                                    char* response, uint32_t response_len,
-                                   uint32_t* success);
+                                   uint32_t* success){
+                                       return 0;
+                                   }
 
 namespace xchain {
 
